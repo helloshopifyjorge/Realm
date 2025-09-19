@@ -15,6 +15,7 @@
         "video_7kRcHz": {
           "type": "video",
           "settings": {
+            "video": "shopify://files/videos/2fec2b36ce7b4ffcb2f7abfd6c046750.mp4",
             "allow_sound": false,
             "subheading": "",
             "subheading2": "",
@@ -91,7 +92,6 @@
         "image_with_text_EBNVzV": {
           "type": "image_with_text",
           "settings": {
-            "image": "",
             "title": "august lounge chair with box cushion",
             "heading_tag": "h6",
             "content": "",
@@ -102,7 +102,6 @@
         "image_with_text_tBUihF": {
           "type": "image_with_text",
           "settings": {
-            "image": "",
             "title": "mimi settee with knife edge pillow",
             "heading_tag": "h6",
             "content": "",
@@ -113,7 +112,6 @@
         "image_with_text_pYb9Ka": {
           "type": "image_with_text",
           "settings": {
-            "image": "",
             "title": "august loungechair with knife edge pillow",
             "heading_tag": "h6",
             "content": "",
@@ -124,7 +122,6 @@
         "image_with_text_8a6FGp": {
           "type": "image_with_text",
           "settings": {
-            "image": "",
             "title": "mimi settee with box cushion",
             "heading_tag": "h6",
             "content": "",
@@ -182,14 +179,14 @@
         "image_C47Ee7": {
           "type": "image",
           "settings": {
-            "image": "",
+            "image": "shopify://shop_images/5.webp",
             "rotation": 0
           }
         },
         "image_4ygiB6": {
           "type": "image",
           "settings": {
-            "image": "",
+            "image": "shopify://shop_images/4.webp",
             "rotation": 0
           }
         }
@@ -257,14 +254,12 @@
         "image_kPAqBc": {
           "type": "image",
           "settings": {
-            "image": "",
             "rotation": 0
           }
         },
         "image_cdzDDj": {
           "type": "image",
           "settings": {
-            "image": "",
             "rotation": 0
           }
         }
@@ -358,8 +353,6 @@
         "image_eCyDFb": {
           "type": "image",
           "settings": {
-            "image": "",
-            "mobile_image": "",
             "subheading": "",
             "subheading2": "",
             "title": "",
@@ -386,7 +379,6 @@
         "image_YXntFT": {
           "type": "image",
           "settings": {
-            "image": "",
             "subheading": "",
             "subheading2": "",
             "title": "",
@@ -413,8 +405,6 @@
         "image_gzjeGw": {
           "type": "image",
           "settings": {
-            "image": "",
-            "mobile_image": "",
             "subheading": "",
             "subheading2": "",
             "title": "",
@@ -441,8 +431,6 @@
         "image_wp3VRq": {
           "type": "image",
           "settings": {
-            "image": "",
-            "mobile_image": "",
             "subheading": "",
             "subheading2": "",
             "title": "",
@@ -469,8 +457,6 @@
         "image_cdk8wf": {
           "type": "image",
           "settings": {
-            "image": "",
-            "mobile_image": "",
             "subheading": "",
             "subheading2": "",
             "title": "",
