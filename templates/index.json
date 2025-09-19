@@ -258,12 +258,14 @@
         "image_kPAqBc": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/7.webp",
             "rotation": 0
           }
         },
         "image_cdzDDj": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/8.webp",
             "rotation": 0
           }
         }
