@@ -177,6 +177,51 @@
         "remove_vertical_spacing": false
       }
     },
+    "multiple_media_with_text_PVRKTt": {
+      "type": "multiple-media-with-text",
+      "blocks": {
+        "image_kPAqBc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/7.webp",
+            "rotation": 0
+          }
+        },
+        "image_cdzDDj": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/8.webp",
+            "rotation": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_kPAqBc",
+        "image_cdzDDj"
+      ],
+      "name": "t:sections.multiple_media_with_text.presets.multiple_media_with_text.name",
+      "settings": {
+        "color_scheme": "",
+        "reveal_on_scroll": true,
+        "separate_section_with_border": true,
+        "media_position_desktop": "before_text",
+        "media_position_mobile": "before_text",
+        "media_layout": "overlap",
+        "media_alignment": "center",
+        "media_alignment_offset": 0,
+        "media_mobile_alignment_offset": 0,
+        "text_alignment": "center",
+        "subheading": "Timeless Rattan. For Designers, For Collectors, For You.",
+        "title": "The Belgian Pearls Collection",
+        "content": "<p>Our launching collection introduces fine rattan furnishings with timeless European design. Now available in North America through Realm Outdoor. </p><p>Shop directly for your home or register as a trade professional to access exclusive pricing and benefits.<br/><br/></p>",
+        "button_1_text": "Register to Trade",
+        "button_1_link": "shopify://pages/contact-1",
+        "button_1_style": "solid",
+        "button_2_text": "",
+        "button_2_link": "",
+        "button_2_style": "solid"
+      }
+    },
     "multiple_media_with_text_pNUtAg": {
       "type": "multiple-media-with-text",
       "blocks": {
@@ -214,52 +259,7 @@
         "subheading": "A New Icon in the Belgian Pearls Collection",
         "title": "Introducing the Mary Louise Armchair",
         "content": "<p><br/>The Belgian Pearls Collection is defined by its architectural rattan forms and quiet elegance—pieces that live comfortably between tradition and modernity. The newest addition, the <strong>Mary Louise Armchair</strong>, continues this legacy with a silhouette that is both graceful and enduring.<br/><br/></p>",
-        "button_1_text": "inquire about this product",
-        "button_1_link": "shopify://pages/contact-1",
-        "button_1_style": "solid",
-        "button_2_text": "",
-        "button_2_link": "",
-        "button_2_style": "solid"
-      }
-    },
-    "multiple_media_with_text_PVRKTt": {
-      "type": "multiple-media-with-text",
-      "blocks": {
-        "image_kPAqBc": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/7.webp",
-            "rotation": 0
-          }
-        },
-        "image_cdzDDj": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/8.webp",
-            "rotation": 0
-          }
-        }
-      },
-      "block_order": [
-        "image_kPAqBc",
-        "image_cdzDDj"
-      ],
-      "name": "t:sections.multiple_media_with_text.presets.multiple_media_with_text.name",
-      "settings": {
-        "color_scheme": "",
-        "reveal_on_scroll": true,
-        "separate_section_with_border": true,
-        "media_position_desktop": "before_text",
-        "media_position_mobile": "before_text",
-        "media_layout": "overlap",
-        "media_alignment": "center",
-        "media_alignment_offset": 0,
-        "media_mobile_alignment_offset": 0,
-        "text_alignment": "center",
-        "subheading": "Timeless Rattan. For Designers, For Collectors, For You",
-        "title": "The Belgian Pearls Collection",
-        "content": "<p>Presenting our first collection of fine rattan furnishings, Belgian Pearls. European design, curated just for you. Available exclusively in North America through Realm Outdoor.<br/><br/></p>",
-        "button_1_text": "Contact Us",
+        "button_1_text": "SHOP NOW",
         "button_1_link": "shopify://pages/contact-1",
         "button_1_style": "solid",
         "button_2_text": "",
@@ -295,7 +295,7 @@
         "subheading_TfApVW": {
           "type": "subheading",
           "settings": {
-            "text": "elevated. versatile. trade crafted."
+            "text": "elevated. versatile. crafted for trade."
           }
         },
         "button_HXyYgM": {
@@ -508,8 +508,8 @@
     "featured-collections",
     "multi_column_DfgLGN",
     "rich_text_rkLGC3",
-    "multiple_media_with_text_pNUtAg",
     "multiple_media_with_text_PVRKTt",
+    "multiple_media_with_text_pNUtAg",
     "slideshow_diREDj",
     "rich_text_gnUKLb",
     "slideshow_FyKFXq",
