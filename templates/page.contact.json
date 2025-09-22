@@ -36,6 +36,8 @@
       "settings": {
         "color_scheme": "",
         "image_size": "auto",
+        "image": "shopify://shop_images/7_743c4992-a8e2-4346-8187-f3c43071385c.png",
+        "mobile_image": "shopify://shop_images/7_743c4992-a8e2-4346-8187-f3c43071385c.png",
         "allow_transparent_header": false,
         "reveal_on_scroll": true,
         "remove_vertical_spacing": true,
