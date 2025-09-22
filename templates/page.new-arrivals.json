@@ -47,116 +47,6 @@
         "overlay_opacity": 30
       }
     },
-    "media_grid_KFdDGP": {
-      "type": "media-grid",
-      "blocks": {
-        "image_yq4aW8": {
-          "type": "image",
-          "settings": {
-            "color_scheme": "",
-            "image": "shopify://shop_images/Untitled_design_24.png",
-            "column_count": "8",
-            "row_count": 2,
-            "title": "",
-            "heading_tag": "h4",
-            "content": "",
-            "link_text": "",
-            "link_url": "",
-            "link_style": "link",
-            "text_position": "place-self-center text-center",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "image_MT6TFi": {
-          "type": "image",
-          "settings": {
-            "color_scheme": "",
-            "image": "shopify://shop_images/Mary_Louise_w_Cushions_4768162d-7f7f-4a42-85cf-430fadd93c3d.png",
-            "column_count": "4",
-            "row_count": 1,
-            "title": "",
-            "heading_tag": "h4",
-            "content": "",
-            "link_text": "",
-            "link_url": "",
-            "link_style": "link",
-            "text_position": "place-self-center text-center",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "image_Jm9P43": {
-          "type": "image",
-          "settings": {
-            "color_scheme": "",
-            "image": "shopify://shop_images/Mary_Louise_Chair_w_Cushions_9a0348c5-ad3f-440c-9846-7464480cc1c0.png",
-            "column_count": "4",
-            "row_count": 1,
-            "title": "",
-            "heading_tag": "h4",
-            "content": "",
-            "link_text": "",
-            "link_url": "",
-            "link_style": "link",
-            "text_position": "place-self-center text-center",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        }
-      },
-      "block_order": [
-        "image_yq4aW8",
-        "image_MT6TFi",
-        "image_Jm9P43"
-      ],
-      "name": "t:sections.media_grid.presets.media_grid.name",
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": true,
-        "desktop_row_height": 290,
-        "mobile_row_height": 180,
-        "section_width": "lg",
-        "spacing": "md",
-        "subheading": "introducing",
-        "title": "The mary louise armchair",
-        "content": "<p>The Mary Louise Armchair embodies the natural elegance of the Belgian Pearls Collection. Handwoven in natural rattan, its graceful silhouette is defined by gently sloping arms, a notched crest, and a refined lattice base.</p><p>For tailored comfort, the armchair is available with custom upholstery in our signature black-and-white ticking stripe, or fully customized in COM (Customer’s Own Material) upon request. </p>"
-      }
-    },
-    "rich_text_46UEeC": {
-      "type": "rich-text",
-      "blocks": {
-        "button_i9KHQj": {
-          "type": "button",
-          "settings": {
-            "style": "solid",
-            "text": "learn more",
-            "url": "shopify://pages/contact-1",
-            "background": "",
-            "text_color": ""
-          }
-        },
-        "heading_kMHADA": {
-          "type": "heading",
-          "settings": {
-            "text": "",
-            "heading_tag": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "button_i9KHQj",
-        "heading_kMHADA"
-      ],
-      "name": "t:sections.rich_text.presets.rich_text.name",
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": false,
-        "content_width": "sm",
-        "text_position": "center",
-        "remove_vertical_spacing": false
-      }
-    },
     "rich_text_bzaVF8": {
       "type": "rich-text",
       "blocks": {
@@ -333,6 +223,133 @@
         "content": ""
       }
     },
+    "image_with_text_overlay_7rUryB": {
+      "type": "image-with-text-overlay",
+      "name": "t:sections.image_with_text_overlay.presets.image_with_text_overlay.name",
+      "settings": {
+        "color_scheme": "",
+        "image_size": "auto",
+        "image": "shopify://shop_images/Banners_5.png",
+        "allow_transparent_header": false,
+        "reveal_on_scroll": true,
+        "remove_vertical_spacing": true,
+        "content_width": "md",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center sm:text-center",
+        "overlay_color": "#000000",
+        "overlay_opacity": 4
+      }
+    },
+    "media_grid_KFdDGP": {
+      "type": "media-grid",
+      "blocks": {
+        "image_yq4aW8": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/Untitled_design_24.png",
+            "column_count": "8",
+            "row_count": 2,
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_position": "place-self-center text-center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "image_MT6TFi": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/Mary_Louise_w_Cushions_4768162d-7f7f-4a42-85cf-430fadd93c3d.png",
+            "column_count": "4",
+            "row_count": 1,
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_position": "place-self-center text-center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "image_Jm9P43": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/Mary_Louise_Chair_w_Cushions_9a0348c5-ad3f-440c-9846-7464480cc1c0.png",
+            "column_count": "4",
+            "row_count": 1,
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_position": "place-self-center text-center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_yq4aW8",
+        "image_MT6TFi",
+        "image_Jm9P43"
+      ],
+      "name": "t:sections.media_grid.presets.media_grid.name",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "separate_section_with_border": true,
+        "desktop_row_height": 290,
+        "mobile_row_height": 180,
+        "section_width": "lg",
+        "spacing": "md",
+        "subheading": "introducing",
+        "title": "The mary louise armchair",
+        "content": "<p>The Mary Louise Armchair embodies the natural elegance of the Belgian Pearls Collection. Handwoven in natural rattan, its graceful silhouette is defined by gently sloping arms, a notched crest, and a refined lattice base.</p><p>For tailored comfort, the armchair is available with custom upholstery in our signature black-and-white ticking stripe, or fully customized in COM (Customer’s Own Material) upon request. </p>"
+      }
+    },
+    "rich_text_46UEeC": {
+      "type": "rich-text",
+      "blocks": {
+        "button_i9KHQj": {
+          "type": "button",
+          "settings": {
+            "style": "solid",
+            "text": "learn more",
+            "url": "shopify://pages/contact-1",
+            "background": "",
+            "text_color": ""
+          }
+        },
+        "heading_kMHADA": {
+          "type": "heading",
+          "settings": {
+            "text": "",
+            "heading_tag": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "button_i9KHQj",
+        "heading_kMHADA"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "separate_section_with_border": false,
+        "content_width": "sm",
+        "text_position": "center",
+        "remove_vertical_spacing": false
+      }
+    },
     "rich_text_RUpmPf": {
       "type": "rich-text",
       "blocks": {
@@ -347,8 +364,8 @@
           "type": "button",
           "settings": {
             "style": "solid",
-            "text": "GET IN TOUCH",
-            "url": "shopify://pages/contact",
+            "text": "SHOP NOW",
+            "url": "shopify://products/mary-louise-armchair-cushion",
             "background": "",
             "text_color": ""
           }
@@ -371,10 +388,11 @@
   "order": [
     "main",
     "image_with_text_overlay_4Cp4eQ",
-    "media_grid_KFdDGP",
-    "rich_text_46UEeC",
     "rich_text_bzaVF8",
     "multi_column_hFQXQg",
+    "image_with_text_overlay_7rUryB",
+    "media_grid_KFdDGP",
+    "rich_text_46UEeC",
     "rich_text_RUpmPf"
   ]
 }
