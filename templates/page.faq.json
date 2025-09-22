@@ -9,17 +9,37 @@
  */
 {
   "sections": {
+    "image_with_text_overlay_LiTTVY": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_3fTm4d": {
+          "type": "heading",
+          "settings": {
+            "text": "Frequently Asked Questions",
+            "heading_tag": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_3fTm4d"
+      ],
+      "name": "t:sections.image_with_text_overlay.presets.image_with_text_overlay.name",
+      "settings": {
+        "color_scheme": "",
+        "image_size": "auto",
+        "allow_transparent_header": false,
+        "reveal_on_scroll": true,
+        "remove_vertical_spacing": true,
+        "content_width": "md",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center sm:text-center",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
     "faq": {
       "type": "faq",
       "blocks": {
-        "category": {
-          "type": "category",
-          "settings": {
-            "title": "THE BELGIAN PEARLS COLLECTION",
-            "icon": "none",
-            "icon_width": 16
-          }
-        },
         "question-1": {
           "type": "question",
           "name": "About Rattan",
@@ -76,14 +96,6 @@
             "answer": "<p>Yes. Realm Outdoor is now open to retail clients. Retail prices are displayed online. For custom needs such as COM cushions or specialty delivery, please contact us directly.</p>"
           }
         },
-        "category_YNDTrJ": {
-          "type": "category",
-          "settings": {
-            "title": "Shipping & Delivery",
-            "icon": "none",
-            "icon_width": 16
-          }
-        },
         "question_GWXcay": {
           "type": "question",
           "name": "Shipping & Delivery",
@@ -101,7 +113,6 @@
         }
       },
       "block_order": [
-        "category",
         "question-1",
         "question_BJTe3V",
         "question-2",
@@ -109,7 +120,6 @@
         "question_kJB6ya",
         "question_dMD79T",
         "question_cc7hYA",
-        "category_YNDTrJ",
         "question_GWXcay",
         "question_ztqYte"
       ],
@@ -117,51 +127,131 @@
         "color_scheme": "",
         "separate_section_with_border": true,
         "show_categories": false,
-        "subheading": "Need help?",
-        "title": "Frequently Asked Questions",
-        "content": ""
+        "subheading": "",
+        "title": "need help?",
+        "content": "<p>Everything you need to know about our furnishings, cushions, shipping, and trade program.</p>"
       }
     },
-    "rich_text_GUR7Uw": {
+    "image_with_text_overlay_iV38Aq": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_UqQL73": {
+          "type": "heading",
+          "settings": {
+            "text": "Not a designer? No problem.",
+            "heading_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_UqQL73"
+      ],
+      "name": "t:sections.image_with_text_overlay.presets.image_with_text_overlay.name",
+      "settings": {
+        "color_scheme": "",
+        "image_size": "auto",
+        "allow_transparent_header": false,
+        "reveal_on_scroll": true,
+        "remove_vertical_spacing": true,
+        "content_width": "md",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center sm:text-center",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
+    "rich_text_tyNW4r": {
       "type": "rich-text",
       "blocks": {
-        "subheading_VENMyy": {
+        "subheading_BQiXhY": {
           "type": "subheading",
           "settings": {
-            "text": "Not a designer? No problem. Here’s what our terms mean for you."
+            "text": "From materials to delivery—find quick answers here."
           }
         },
-        "heading_VCdJPM": {
+        "heading_rH47KM": {
           "type": "heading",
           "settings": {
             "text": "designer term glossary",
             "heading_tag": "h1"
           }
-        },
+        }
+      },
+      "block_order": [
+        "subheading_BQiXhY",
+        "heading_rH47KM"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": false,
+        "content_width": "sm",
+        "text_position": "center",
+        "remove_vertical_spacing": false
+      }
+    },
+    "rich_text_GUR7Uw": {
+      "type": "rich-text",
+      "blocks": {
         "richtext_8UYcXn": {
           "type": "richtext",
           "settings": {
-            "content": "<p>RATTAN: A strong, flexible vine used for furniture frames. Solid-core, unlike bamboo.</p><p>WICKER: A weaving technique used with rattan and other materials.</p><p>PATINA: The natural surface sheen and color change that develops on rattan with age and use.</p><p>COM (Customer's Own Materials): Fabric provided by the client for custom cushion covers. You send us your fabric, and we create tailored covers to fit your Belgian Pearls cushions.</p><p>BOX CUSHION: A tailored cushion with defined edges and side panels for a structured look.</p><p>KNIFE-EDGE PILLOW: A simple cushion with a sharp, single seam around the edges, creating a sleeker profile.</p><p>POLYFILL: An outdoor-friendly insert made with resilient synthetic fibers designed to resist moisture.</p><p>DOWN-FEATHER FILL: A plush indoor insert combining feathers and down for luxurious softness.</p><p>WHITE-GLOVE DELIVERY: Premium delivery service including in-home placement and packaging removal.</p><p>MADE-TO-ORDER: A piece crafted specifically for you once your order is placed, often with longer lead times.</p><p>FINISH VARIATION: Natural shifts in tone and texture due to the rattan’s organic qualities, making each piece unique.</p>"
+            "content": "<ul><li><strong>RATTAN: </strong>A strong, flexible vine used for furniture frames. Solid-core, unlike bamboo.</li></ul><p></p><ul><li><strong>WICKER:</strong> A weaving technique used with rattan and other materials.</li></ul><p></p><ul><li><strong>PATINA:</strong> The natural surface sheen and color change that develops on rattan with age and use.</li></ul><p></p><ul><li><strong>COM (Customer's Own Materials): </strong>Fabric provided by the client for custom cushion covers. You send us your fabric, and we create tailored covers to fit your Belgian Pearls cushions.</li></ul><p></p><ul><li><strong>BOX CUSHION:</strong> A tailored cushion with defined edges and side panels for a structured look.</li></ul><p></p><ul><li><strong>KNIFE-EDGE PILLOW</strong>: A simple cushion with a sharp, single seam around the edges, creating a sleeker profile.</li></ul><p></p><ul><li><strong>POLYFILL: </strong>An outdoor-friendly insert made with resilient synthetic fibers designed to resist moisture.</li></ul><p></p><ul><li><strong>DOWN-FEATHER FILL: </strong>A plush indoor insert combining feathers and down for luxurious softness.</li></ul><p></p><ul><li><strong>WHITE-GLOVE DELIVERY: </strong>Premium delivery service including in-home placement and packaging removal.</li></ul><p></p><ul><li><strong>MADE-TO-ORDER: </strong>A piece crafted specifically for you once your order is placed, often with longer lead times.</li></ul><p></p><ul><li><strong>FINISH VARIATION:</strong> Natural shifts in tone and texture due to the rattan’s organic qualities, making each piece unique.</li></ul>"
           }
         }
       },
       "block_order": [
-        "subheading_VENMyy",
-        "heading_VCdJPM",
         "richtext_8UYcXn"
       ],
       "name": "t:sections.rich_text.presets.rich_text.name",
       "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": true,
+        "color_scheme": "scheme-1",
+        "separate_section_with_border": false,
         "content_width": "sm",
         "text_position": "start",
+        "remove_vertical_spacing": true
+      }
+    },
+    "rich_text_h8d74i": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_dny6Yk": {
+          "type": "subheading",
+          "settings": {
+            "text": "have more questions?"
+          }
+        },
+        "button_ftNCzY": {
+          "type": "button",
+          "settings": {
+            "style": "solid",
+            "text": "Contact us",
+            "url": "shopify://pages/contact",
+            "background": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "subheading_dny6Yk",
+        "button_ftNCzY"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "content_width": "sm",
+        "text_position": "center",
         "remove_vertical_spacing": false
       }
     }
   },
   "order": [
+    "image_with_text_overlay_LiTTVY",
     "faq",
-    "rich_text_GUR7Uw"
+    "image_with_text_overlay_iV38Aq",
+    "rich_text_tyNW4r",
+    "rich_text_GUR7Uw",
+    "rich_text_h8d74i"
   ]
 }
