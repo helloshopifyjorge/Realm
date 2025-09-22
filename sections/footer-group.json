@@ -452,7 +452,8 @@
         "image_WQxjCm": {
           "type": "image",
           "settings": {
-            "image_width": 180,
+            "image": "shopify://shop_images/Realm_01_Artboard_1_1.png",
+            "image_width": 200,
             "link": "https://realmoutdoor.com/"
           }
         },
