@@ -1,1 +1,103 @@
-{"sections":{"faq":{"type":"faq","blocks":{"category":{"type":"category","settings":{"title":"Order","icon":"none","icon_width":16}},"question-1":{"type":"question","settings":{"question":"DO YOU SHIP OVERSEAS?","answer":"<p>YES, WE SHIP ALL OVER THE WORLD. SHIPPING COSTS WILL APPLY, AND WILL BE ADDED AT CHECKOUT. WE RUN DISCOUNTS AND PROMOTIONS ALL YEAR, SO STAY TUNED FOR EXCLUSIVE DEALS. <\/p>"}},"question-2":{"type":"question","settings":{"question":"HOW LONG WILL IT TAKE TO GET MY ORDERS?","answer":"<p>IT DEOENDS ON WHERE YOU ARE. ORDERS PROCESSED HERE WILL TAKE 5-7 BUSINESS DAYS TO ARRIVE. OVERSEAS DELIVERIES CAN TAKE ANYWHERE FROM 7-16 DAYS. DELIVERY DETAILS WILL BE PROVIDED IN YOUR CONFIRMATION EMAIL.<\/p>"}},"question-3":{"type":"question","settings":{"question":"ANY QUESTIONS?","answer":"<p>YOU CAN CONTACT US THROUGH OUR CONTACT PAGE! WE WILL BE HAPPY TO ASSIST YOU!<\/p>"}}},"block_order":["category","question-1","question-2","question-3"],"settings":{"color_scheme":"","separate_section_with_border":true,"show_categories":false,"subheading":"Need help?","title":"Frequently Asked Questions","content":""}}},"order":["faq"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "category": {
+          "type": "category",
+          "settings": {
+            "title": "THE BELGIAN PEARLS COLLECTION",
+            "icon": "none",
+            "icon_width": 16
+          }
+        },
+        "question-1": {
+          "type": "question",
+          "name": "About Rattan",
+          "settings": {
+            "question": "WHAT IS RATTAN?",
+            "answer": "<p>Rattan is a natural climbing vine prized for its strength, density, and flexibility. Unlike hollow bamboo, rattan has a solid core, making it exceptionally durable for furniture. Wicker refers to the weaving technique, not the material, so our Belgian Pearls pieces are rattan woven in wicker patterns.</p>"
+          }
+        },
+        "question_BJTe3V": {
+          "type": "question",
+          "name": "Care & Maintenance",
+          "settings": {
+            "question": "HOW DO I CARE FOR RATTAN FURNITURE?",
+            "answer": "<p>Rattan is durable but naturally porous. We recommend placing furniture in covered outdoor spaces to protect from direct rain and prolonged sun exposure. Dust with a soft cloth and wipe gently with a damp cloth as needed. Avoid harsh chemicals. Over time, rattan develops a natural patina, which enhances its character.</p>"
+          }
+        },
+        "question-2": {
+          "type": "question",
+          "name": "Color Variants & Finishes",
+          "settings": {
+            "question": "WHAT COLORS ARE AVAILABLE FOR THE BELGIAN PEARLS COLLECTION?",
+            "answer": "<p>Each piece is finished in natural tones that highlight rattan’s organic character. Variations occur because rattan is a natural material—it develops a warm patina with age and use. Belgian Pearls offers refined shades ranging from soft honey to deep espresso. Exact tones may vary slightly, ensuring every piece is one of a kind.</p>"
+          }
+        },
+        "question-3": {
+          "type": "question",
+          "name": "Custom Orders",
+          "settings": {
+            "question": "CAN I CUSTOMIZE MY ORDER?",
+            "answer": "<p>Yes. We offer custom cushion covers in COM fabrics and select customization on finishes depending on availability. Please inquire with our team to confirm options and receive a quote.</p>"
+          }
+        },
+        "question_kJB6ya": {
+          "type": "question",
+          "name": "Cushions",
+          "settings": {
+            "question": "DO THE FURNISHINGS COME WITH CUSHIONS?",
+            "answer": "<p>Cushions are sold separately. We offer inserts in two options:</p><ul><li><strong>Outdoor-friendly poly fill</strong> (resilient and weather-resistant)</li><li><strong>Down-feather blend</strong> (luxurious indoor comfort)<br/></li></ul><p>All inserts are designed for our <strong>signature black and white ticking covers</strong>, which can be purchased separately. Clients may also provide <strong>COM (Customer’s Own Material)</strong> for custom cushion covers—please contact us for a quote.</p>"
+          }
+        },
+        "question_dMD79T": {
+          "type": "question",
+          "name": "Trade Program",
+          "settings": {
+            "question": "HOW DOES THE TRADE PROGRAM WORK?",
+            "answer": "<p>Trade professionals (designers, architects, hospitality groups) can register to unlock exclusive trade pricing. Once approved, your account will display trade rates when logged in. You’ll also receive access to tiered benefits including early previews, custom quotes, and concierge-level support.</p>"
+          }
+        },
+        "question_cc7hYA": {
+          "type": "question",
+          "name": "Retail Clients",
+          "settings": {
+            "question": "CAN I PURCHASE DIRECTLY AS A HOMEOWNER?",
+            "answer": "<p>Yes. Realm Outdoor is now open to retail clients. Retail prices are displayed online. For custom needs such as COM cushions or specialty delivery, please contact us directly.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "category",
+        "question-1",
+        "question_BJTe3V",
+        "question-2",
+        "question-3",
+        "question_kJB6ya",
+        "question_dMD79T",
+        "question_cc7hYA"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "show_categories": false,
+        "subheading": "Need help?",
+        "title": "Frequently Asked Questions",
+        "content": ""
+      }
+    }
+  },
+  "order": [
+    "faq"
+  ]
+}
