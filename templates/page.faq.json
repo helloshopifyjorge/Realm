@@ -75,6 +75,22 @@
             "question": "CAN I PURCHASE DIRECTLY AS A HOMEOWNER?",
             "answer": "<p>Yes. Realm Outdoor is now open to retail clients. Retail prices are displayed online. For custom needs such as COM cushions or specialty delivery, please contact us directly.</p>"
           }
+        },
+        "category_YNDTrJ": {
+          "type": "category",
+          "settings": {
+            "title": "Shipping & Delivery",
+            "icon": "none",
+            "icon_width": 16
+          }
+        },
+        "question_GWXcay": {
+          "type": "question",
+          "name": "Shipping & Delivery",
+          "settings": {
+            "question": "DO YOU SHIP NATIONWIDE?",
+            "answer": "<p>Yes. We ship across the U.S. and Canada. For U.S. retail clients, delivery is curbside as standard. White-glove delivery and installation are available for VIP trade partners and select retail clients by request.</p>"
+          }
         }
       },
       "block_order": [
@@ -85,7 +101,9 @@
         "question-3",
         "question_kJB6ya",
         "question_dMD79T",
-        "question_cc7hYA"
+        "question_cc7hYA",
+        "category_YNDTrJ",
+        "question_GWXcay"
       ],
       "settings": {
         "color_scheme": "",
