@@ -56,34 +56,34 @@
         "controls_color": "#ffffff"
       }
     },
-    "rich_text_9xN7mG": {
-      "type": "rich-text",
+    "featured-collections": {
+      "type": "featured-collections",
       "blocks": {
-        "heading_EXdNWw": {
-          "type": "heading",
+        "collection_UGKmqa": {
+          "type": "collection",
           "settings": {
-            "text": "A refined finishing touch has arrived",
-            "heading_tag": "h1"
-          }
-        },
-        "subheading_tBrkCJ": {
-          "type": "subheading",
-          "settings": {
-            "text": "<a href=\"/pages/new-arrivals\" title=\"New Arrivals\">learn more</a>"
+            "collection": "belgian-pearls",
+            "products_count": 50,
+            "title": "Belgian Pearls",
+            "link_url": "shopify://collections/belgian-pearls",
+            "link_text": "view the collection"
           }
         }
       },
       "block_order": [
-        "heading_EXdNWw",
-        "subheading_tBrkCJ"
+        "collection_UGKmqa"
       ],
-      "name": "t:sections.rich_text.presets.rich_text.name",
+      "custom_css": [],
       "settings": {
         "color_scheme": "scheme-1",
-        "separate_section_with_border": false,
-        "content_width": "md",
-        "text_position": "center",
-        "remove_vertical_spacing": false
+        "separate_section_with_border": true,
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_per_row_mobile": "1",
+        "products_per_row_desktop": 3,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 0.5,
+        "subheading": "Exclusively available to north america through realm outdoors"
       }
     },
     "multi_column_DfgLGN": {
@@ -161,7 +161,7 @@
         "subheading_6Crj8Y": {
           "type": "subheading",
           "settings": {
-            "text": "<a href=\"/pages/contact-1\" target=\"_blank\" title=\"Contact\">CONTACT US FOR MORE INFORMATION ON THE BELGIAN PEARLS COLLECTION</a>"
+            "text": "SHOP OUR CUSHION COLLECTION"
           }
         }
       },
@@ -222,36 +222,6 @@
         "button_2_style": "solid"
       }
     },
-    "featured-collections": {
-      "type": "featured-collections",
-      "blocks": {
-        "collection_UGKmqa": {
-          "type": "collection",
-          "settings": {
-            "collection": "belgian-pearls",
-            "products_count": 50,
-            "title": "Belgian Pearls",
-            "link_url": "shopify://collections/belgian-pearls",
-            "link_text": "view the collection"
-          }
-        }
-      },
-      "block_order": [
-        "collection_UGKmqa"
-      ],
-      "custom_css": [],
-      "settings": {
-        "color_scheme": "scheme-1",
-        "separate_section_with_border": true,
-        "hide_product_information": false,
-        "stack_products": false,
-        "products_per_row_mobile": "1",
-        "products_per_row_desktop": 3,
-        "horizontal_spacing_factor": 1,
-        "vertical_spacing_factor": 0.5,
-        "subheading": "Exclusively available to north america through realm outdoors"
-      }
-    },
     "multiple_media_with_text_PVRKTt": {
       "type": "multiple-media-with-text",
       "blocks": {
@@ -286,9 +256,9 @@
         "media_alignment_offset": 0,
         "media_mobile_alignment_offset": 0,
         "text_alignment": "center",
-        "subheading": "",
-        "title": "",
-        "content": "<p>PRESENTING OUR FIRST COLLECTION OF FINE RATTAN FURNISHINGS, BELGIAN PEARLS. EUROPEAN DESIGN, CURATED JUST FOR YOU. AVAILABLE EXCLUSIVELY IN NORTH AMERICA THROUGH <a href=\"/pages/who-we-are\" title=\"Who we are\"><strong>REALM OUTDOOR</strong></a>.<br/><br/></p>",
+        "subheading": "Timeless Rattan. For Designers, For Collectors, For You",
+        "title": "The Belgian Pearls Collection",
+        "content": "<p>Presenting our first collection of fine rattan furnishings, Belgian Pearls. European design, curated just for you. Available exclusively in North America through Realm Outdoor.<br/><br/></p>",
         "button_1_text": "Contact Us",
         "button_1_link": "shopify://pages/contact-1",
         "button_1_style": "solid",
@@ -325,7 +295,7 @@
         "subheading_TfApVW": {
           "type": "subheading",
           "settings": {
-            "text": "elevated. versatile. trade exclusive."
+            "text": "elevated. versatile. trade crafted."
           }
         },
         "button_HXyYgM": {
@@ -535,11 +505,10 @@
   },
   "order": [
     "slideshow",
-    "rich_text_9xN7mG",
+    "featured-collections",
     "multi_column_DfgLGN",
     "rich_text_rkLGC3",
     "multiple_media_with_text_pNUtAg",
-    "featured-collections",
     "multiple_media_with_text_PVRKTt",
     "slideshow_diREDj",
     "rich_text_gnUKLb",
