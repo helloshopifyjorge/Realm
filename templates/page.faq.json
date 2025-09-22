@@ -121,9 +121,47 @@
         "title": "Frequently Asked Questions",
         "content": ""
       }
+    },
+    "rich_text_GUR7Uw": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_VENMyy": {
+          "type": "subheading",
+          "settings": {
+            "text": "Not a designer? No problem. Here’s what our terms mean for you."
+          }
+        },
+        "heading_VCdJPM": {
+          "type": "heading",
+          "settings": {
+            "text": "designer term glossary",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_8UYcXn": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p><strong>Rattan</strong>: A strong, flexible vine used for furniture frames. Solid-core, unlike bamboo.</p><p><strong>Wicker</strong>: A weaving technique used with rattan and other materials.</p><p><strong>Patina</strong>: The natural surface sheen and color change that develops on rattan with age and use.</p><p><strong>COM (Customer’s Own Material)</strong>: Fabric provided by the client for custom cushion covers. You send us your fabric, and we create tailored covers to fit your Belgian Pearls cushions.</p><p><strong>Box Cushion</strong>: A tailored cushion with defined edges and side panels for a structured look.</p><p><strong>Knife-Edge Cushion</strong>: A simple cushion with a sharp, single seam around the edges, creating a sleeker profile.</p><p><strong>Poly Fill</strong>: An outdoor-friendly insert made with resilient synthetic fibers designed to resist moisture.</p><p><strong>Down-Feather Fill</strong>: A plush indoor insert combining feathers and down for luxurious softness.</p><p><strong>White-Glove Delivery</strong>: Premium delivery service including in-home placement and packaging removal.</p><p><strong>Made-to-Order</strong>: A piece crafted specifically for you once your order is placed, often with longer lead times.</p><p><strong>Finish Variation</strong>: Natural shifts in tone and texture due to the rattan’s organic qualities, making each piece unique.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_VENMyy",
+        "heading_VCdJPM",
+        "richtext_8UYcXn"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "content_width": "sm",
+        "text_position": "start",
+        "remove_vertical_spacing": false
+      }
     }
   },
   "order": [
-    "faq"
+    "faq",
+    "rich_text_GUR7Uw"
   ]
 }
