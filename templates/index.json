@@ -173,7 +173,7 @@
         "subheading_6Crj8Y": {
           "type": "subheading",
           "settings": {
-            "text": "contact us for us for Customer own material (COM) requests"
+            "text": "<a href=\"/pages/contact\" target=\"_blank\" title=\"Contact\">contact us</a> for us for Customer own material (COM) requests"
           }
         }
       },
@@ -505,16 +505,16 @@
         "separate_section_with_border": true,
         "blog": "lifestyle",
         "posts_count": 3,
-        "stack_on_mobile": false,
-        "show_category": true,
+        "stack_on_mobile": true,
+        "show_category": false,
         "show_date": false,
         "show_excerpt": true,
         "show_read_more": true,
         "subheading": "",
         "title": "Blog posts",
         "content": "",
-        "button_link": "",
-        "button_text": "View all"
+        "button_link": "shopify://blogs/lifestyle",
+        "button_text": "learn more"
       }
     }
   },
