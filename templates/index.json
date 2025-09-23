@@ -66,7 +66,7 @@
             "products_count": 50,
             "title": "Belgian Pearls",
             "link_url": "shopify://collections/belgian-pearls",
-            "link_text": "view the collection"
+            "link_text": "View full collection"
           }
         }
       },
@@ -158,6 +158,18 @@
     "rich_text_rkLGC3": {
       "type": "rich-text",
       "blocks": {
+        "button_whqbUy": {
+          "type": "button",
+          "settings": {
+            "style": "outline",
+            "loggedintext": "View Collection",
+            "loggedin_url": "",
+            "notloggedin_url": "shopify://collections/belgian-pearls-cushions",
+            "notloggedintext": "shop now",
+            "background": "#f7f5f0",
+            "text_color": "#454d31"
+          }
+        },
         "subheading_6Crj8Y": {
           "type": "subheading",
           "settings": {
@@ -166,6 +178,7 @@
         }
       },
       "block_order": [
+        "button_whqbUy",
         "subheading_6Crj8Y"
       ],
       "name": "t:sections.rich_text.presets.rich_text.name",
