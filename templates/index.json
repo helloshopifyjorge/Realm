@@ -306,7 +306,7 @@
             "loggedin_url": "shopify://collections/belgian-pearls",
             "notloggedin_url": "shopify://pages/register",
             "notloggedintext": "REGISTER TO ACCESS PRICING",
-            "background": "",
+            "background": "rgba(0,0,0,0)",
             "text_color": ""
           }
         }
