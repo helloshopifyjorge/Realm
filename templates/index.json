@@ -302,7 +302,10 @@
           "type": "button",
           "settings": {
             "style": "solid",
-            "url": "shopify://pages/register",
+            "loggedintext": "View Collection",
+            "loggedin_url": "shopify://collections/belgian-pearls",
+            "notloggedin_url": "shopify://pages/register",
+            "notloggedintext": "REGISTER TO ACCESS PRICING",
             "background": "",
             "text_color": ""
           }
