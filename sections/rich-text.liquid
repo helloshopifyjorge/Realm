@@ -74,29 +74,28 @@
   {%- assign logged_in_label = block.settings.loggedintext | default: 'View Collection' -%}
   {%- assign not_logged_in_label = block.settings.notloggedintext | default: 'REGISTER TO ACCESS PRICING' -%}
 
-  {%- if logged_in_label != blank or not_logged_in_label != blank -%}
-    {% if customer and customer.tags contains 'trade-approved' %}
-      {% render 'button',
-        content: logged_in_label,
-        href: "https://realmoutdoor.com/collections/belgian-pearls",
-        size: block.settings.size,
-        style: block.settings.style,
-        background: block.settings.background,
-        text_color: block.settings.text_color,
-        block: block
-      %}
-    {% else %}
-      {% render 'button',
-        content: not_logged_in_label,
-        href: "https://realmoutdoor.com/pages/register",
-        size: block.settings.size,
-        style: block.settings.style,
-        background: block.settings.background,
-        text_color: block.settings.text_color,
-        block: block
-      %}
-    {% endif %}
-  {%- endif -%}
+  {% if customer and customer.tags contains 'trade-approved' %}
+    {% render 'button',
+      content: logged_in_label, text: logged_in_label, label: logged_in_label,
+      href: block.settings.loggedin_url,
+      size: block.settings.size,
+      style: block.settings.style,
+      background: block.settings.background,
+      text_color: block.settings.text_color,
+      block: block
+    %}
+  {% else %}
+    {% render 'button',
+      content: not_logged_in_label, text: not_logged_in_label, label: not_logged_in_label,
+      href: block.settings.notloggedin_url,
+      size: block.settings.size,
+      style: block.settings.style,
+      background: block.settings.background,
+      text_color: block.settings.text_color,
+      block: block
+    %}
+  {% endif %}
+
 
             {%- when 'liquid' -%}
               {%- if block.settings.liquid != blank -%}
@@ -340,56 +339,62 @@
       ]
     },
     {
-      "type": "button",
-      "name": "t:sections.rich_text.blocks.button.name",
-      "settings": [
+  "type": "button",
+  "name": "t:sections.rich_text.blocks.button.name",
+  "settings": [
+    {
+      "type": "select",
+      "id": "style",
+      "label": "t:global.text.style",
+      "options": [
         {
-          "type": "select",
-          "id": "style",
-          "label": "t:global.text.style",
-          "options": [
-            {
-              "value": "outline",
-              "label": "t:global.text.button_style_options.outline"
-            },
-            {
-              "value": "solid",
-              "label": "t:global.text.button_style_options.solid"
-            }
-          ],
-          "default": "solid"
+          "value": "outline",
+          "label": "t:global.text.button_style_options.outline"
         },
         {
-          "type": "text",
-          "id": "notloggedintext",
-          "label": "NotLoggedinText",
-          "default": "Button text"
-        },
-        {
-          "type": "text",
-          "id": "loggedintext",
-          "label": "LoggedinText",
-          "default": "Button text"
-        },
-        
-        {
-          "type": "url",
-          "id": "url",
-          "label": "url"
-        },
-       
-        {
-          "type": "color",
-          "id": "background",
-          "label": "t:global.colors.background"
-        },
-        {
-          "type": "color",
-          "id": "text_color",
-          "label": "t:global.text.text"
+          "value": "solid",
+          "label": "t:global.text.button_style_options.solid"
         }
-      ]
+      ],
+      "default": "solid"
     },
+    {
+      "type": "text",
+      "id": "loggedintext",
+      "label": "Logged-in button text",
+      "default": "View Collection"
+    },
+    {
+  "type": "url",
+  "id": "loggedin_url",
+  "label": "Logged-in button link"
+},
+{
+  "type": "url",
+  "id": "notloggedin_url",
+  "label": "Not-logged-in button link"
+},
+    {
+      "type": "text",
+      "id": "notloggedintext",
+      "label": "Not-logged-in button text",
+      "default": "REGISTER TO ACCESS PRICING"
+    },
+    
+    {
+      "type": "color",
+      "id": "background",
+      "label": "t:global.colors.background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:global.text.text",
+      "default": "#ffffff"
+    }
+  ]
+},
     {
       "type": "liquid",
       "name": "t:sections.rich_text.blocks.liquid.name",
