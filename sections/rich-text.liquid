@@ -71,14 +71,32 @@
               <a {% if block.settings.url %}href="{{ block.settings.url }}"{% endif %} class="link" {{ block.shopify_attributes }}>{{ block.settings.text | escape }}</a>
 
             {%- when 'button' -%}
-              {%- if block.settings.text != blank -%}
-                {% if customer.tags contains 'trade-approved' %}
-{% render 'button', content: block.settings.loggedin-text, href: "https://realmoutdoor.com/collections/belgian-pearls", size: block.settings.size, style: block.settings.style, background: block.settings.background, text_color: block.settings.text_color, block: block %}
-{% else %}
-  <a class="button" href="https://realmoutdoor.com/pages/register" style= "width:50%">REGISTER TO ACCESS PRICING</a>
-{% endif %}
-                
-                {%- endif -%}
+  {%- assign logged_in_label = block.settings.loggedintext | default: 'View Collection' -%}
+  {%- assign not_logged_in_label = block.settings.notloggedintext | default: 'REGISTER TO ACCESS PRICING' -%}
+
+  {%- if logged_in_label != blank or not_logged_in_label != blank -%}
+    {% if customer and customer.tags contains 'trade-approved' %}
+      {% render 'button',
+        content: logged_in_label,
+        href: "https://realmoutdoor.com/collections/belgian-pearls",
+        size: block.settings.size,
+        style: block.settings.style,
+        background: block.settings.background,
+        text_color: block.settings.text_color,
+        block: block
+      %}
+    {% else %}
+      {% render 'button',
+        content: not_logged_in_label,
+        href: "https://realmoutdoor.com/pages/register",
+        size: block.settings.size,
+        style: block.settings.style,
+        background: block.settings.background,
+        text_color: block.settings.text_color,
+        block: block
+      %}
+    {% endif %}
+  {%- endif -%}
 
             {%- when 'liquid' -%}
               {%- if block.settings.liquid != blank -%}
@@ -343,14 +361,14 @@
         },
         {
           "type": "text",
-          "id": "not-loggedin-text",
-          "label": "Not-Loggedin-Text",
+          "id": "notloggedintext",
+          "label": "NotLoggedinText",
           "default": "Button text"
         },
         {
           "type": "text",
-          "id": "loggedin-text",
-          "label": "Loggedin-Text",
+          "id": "loggedintext",
+          "label": "LoggedinText",
           "default": "Button text"
         },
         
