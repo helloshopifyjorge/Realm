@@ -302,7 +302,6 @@
           "type": "button",
           "settings": {
             "style": "solid",
-            "text": "TEST TEST",
             "url": "shopify://pages/register",
             "background": "",
             "text_color": ""
