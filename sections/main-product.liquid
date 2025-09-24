@@ -119,9 +119,9 @@
 
           <div class="v-stack">
             <span class="h6">{{ product.title }}</span>
-
+{% if locksmith_access_granted %}
             {%- if product.selected_or_first_available_variant != nil -%}
-             {% if locksmith_access_granted %}
+             
               
               Trade Price: {%- render 'price-trade', variant: product.selected_or_first_available_variant, hide_unit_price: true, context: 'card' -%} 
 {% else %}
