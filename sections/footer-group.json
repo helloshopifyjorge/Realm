@@ -453,7 +453,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Flavicon_1000_x_1000_px_8.png",
-            "image_width": 280,
+            "image_width": 200,
             "link": "https://realmoutdoor.com/"
           }
         },
