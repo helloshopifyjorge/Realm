@@ -228,10 +228,10 @@
           "type": "button",
           "settings": {
             "style": "solid",
-            "loggedintext": "View Collection",
-            "loggedin_url": "",
-            "notloggedin_url": "",
-            "notloggedintext": "REGISTER TO ACCESS PRICING",
+            "loggedintext": "contact us",
+            "loggedin_url": "shopify://pages/contact",
+            "notloggedin_url": "shopify://pages/contact",
+            "notloggedintext": "contact us",
             "background": "",
             "text_color": ""
           }
