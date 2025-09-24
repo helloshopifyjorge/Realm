@@ -68,7 +68,7 @@
         "richtext_7ztFRH": {
           "type": "richtext",
           "settings": {
-            "content": "<p>Rattan is more than a material—it’s a living expression of craftsmanship, heritage, and natural elegance. Each piece in the <em>Belgian Pearls Collection</em> is handcrafted from sustainably harvested rattan, designed to age gracefully with time and care. This page offers guidance to help you protect, preserve, and celebrate your Realm Outdoor investment.</p>"
+            "content": "<p>Rattan is more than a material—it’s a living expression of craftsmanship, heritage, and natural elegance. Each piece in the<a href=\"/collections/belgian-pearls\" title=\"Belgian Pearls\"><strong> Belgian Pearls Collection</strong></a> is handcrafted from sustainably harvested rattan, designed to age gracefully with time and care. This page offers guidance to help you protect, preserve, and celebrate your Realm Outdoor investment.</p>"
           }
         }
       },
@@ -85,6 +85,80 @@
         "remove_vertical_spacing": false
       }
     },
+    "rich_text_kH4Exe": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_6iEtUJ": {
+          "type": "subheading",
+          "settings": {
+            "text": ""
+          }
+        },
+        "heading_GWmcyW": {
+          "type": "heading",
+          "settings": {
+            "text": "What rattan actually needs (quick truths)",
+            "heading_tag": "h3"
+          }
+        },
+        "richtext_wp9TdA": {
+          "type": "richtext",
+          "settings": {
+            "content": "<ul><li><strong>Gentle, low-moisture cleaning</strong> is the baseline: dust with a soft cloth/brush or vacuum with a brush attachment; for grime, use a tiny amount of mild soap in warm water—never soak, and dry thoroughly.</li><li><strong>Outdoor exposure:</strong> natural rattan is for interiors or <em>short</em> stints outdoors/covered spaces. Avoid prolonged sun/rain; rotate pieces to even any fading. Expect greying when used outside under cover.</li><li><strong>Oils & waxes:</strong> Museums warn that past applications of waxes/PEG/glycerin darken plant fibers and can accelerate long-term deterioration or get sticky; for conservation contexts, avoid these. Some furniture makers allow <strong>very sparing oiling</strong> only when dryness/splitting is present (often on unsealed cane/rattan), not as routine “polish.” </li><li>We’ll reflect both: default = no oil; if splitting is evident, spot-oil is a last resort.</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_6iEtUJ",
+        "heading_GWmcyW",
+        "richtext_wp9TdA"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "content_width": "sm",
+        "text_position": "start",
+        "remove_vertical_spacing": false
+      }
+    },
+    "rich_text_JrCQmz": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_nCGxba": {
+          "type": "heading",
+          "settings": {
+            "text": "Care paths (for how you want it to age)",
+            "heading_tag": "h3"
+          }
+        },
+        "subheading_nxLNjL": {
+          "type": "subheading",
+          "settings": {
+            "text": "Heirloom Longevity (keep the golden tone; maximum life)"
+          }
+        },
+        "richtext_PMpNGt": {
+          "type": "richtext",
+          "settings": {
+            "content": "<ul><li>Weekly dusting (soft brush/microfiber) and vacuum with brush attachment; monthly damp wipe (mild soap + warm water), then dry.</li></ul><p></p><ul><li>Keep away from direct sun and heating vents; avoid big relative humity (RH) swings (plant fibres get brittle in low RH and distort with high RH).</li></ul><p></p><ul><li>If you see <strong>true dryness/splitting</strong> on bare/unfinished rattan only: spot-treat with <strong>tung oil or boiled linseed oil</strong>, very sparingly, then buff dry. (Not for lacquered/varnished finishes.)<br/><br/><strong>Avoid:</strong> routine oiling/waxing; heavy water; harsh cleaners. (Museum guidance.)</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_nCGxba",
+        "subheading_nxLNjL",
+        "richtext_PMpNGt"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "content_width": "sm",
+        "text_position": "start",
+        "remove_vertical_spacing": false
+      }
+    },
     "multi_column_H74NXX": {
       "type": "multi-column",
       "blocks": {
@@ -93,7 +167,7 @@
           "settings": {
             "title": "sun protection",
             "heading_tag": "h4",
-            "content": "<p>Avoid prolonged direct sunlight. Natural rattan can fade or dry out over time. Place pieces in covered outdoor areas or indoors to protect the integrity of the fibers and finish.</p>",
+            "content": "<p>Avoid prolonged direct sunlight unless looking to gain a patina. Natural rattan can fade or dry out over time depending on care and desired look. Place pieces in covered outdoor areas or indoors to protect the integrity of the fibers and finish for longevity.</p>",
             "link_url": "",
             "link_text": ""
           }
@@ -179,6 +253,7 @@
         "image_with_text_VJT33J",
         "image_with_text_cwrFb6"
       ],
+      "disabled": true,
       "name": "t:sections.multi_column.presets.multi_column.name",
       "settings": {
         "color_scheme": "",
@@ -297,6 +372,8 @@
     "main",
     "image_with_text_overlay_eGGdm6",
     "rich_text_aV6E9D",
+    "rich_text_kH4Exe",
+    "rich_text_JrCQmz",
     "multi_column_H74NXX",
     "image_with_text_overlay_VBHBXX",
     "rich_text_XfEYiT"
