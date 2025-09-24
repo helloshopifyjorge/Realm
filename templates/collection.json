@@ -13,6 +13,7 @@
       "type": "collection-banner",
       "settings": {
         "color_scheme": "",
+        "image": "shopify://shop_images/Website_Banners_2500_x_900_px.png",
         "image_size": "xs",
         "allow_transparent_header": false,
         "reveal": true,
