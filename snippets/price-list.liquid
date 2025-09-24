@@ -1,25 +1,35 @@
 {%- comment -%}
 ----------------------------------------------------------------------------------------------------------------------
-PRODUCT PRICE (with Locksmith trade pricing)
-- Trade % in product.metafields.custom.trade_price (e.g. 15 => 15% off)
-- Trade pricing shows ONLY when product.template_suffix == 'trade' AND Locksmith access is granted
+PRODUCT PRICE
 ----------------------------------------------------------------------------------------------------------------------
+
+Render a list of price for a product, variant or line item.
+
+********************************************
+Supported variables
+********************************************
+
+* product: if provided, the prices are rendered for the whole product
+* variant: if provided, then only the price from this variant is rendered
+* line_item: if provided, then the price from this line item are rendered (used on cart or order)
+* hide_unit_price: if set to true unit prices are hidden (mostly useful for size constrained elements)
+* context: can be "product", "line_item" or "card". This controls how the prices are displayed (using the correct sizes)
 {%- endcomment -%}
-
-{% capture var %}{% render 'locksmith-variables', variable: 'access_granted', scope: 'subject', subject: product %}{% endcapture %}
-{% if var == 'true' %}{% assign locksmith_access_granted = true %}{% else %}{% assign locksmith_access_granted = false %}{% endif %}
-
+{% capture var %}{% render 'locksmith-variables', variable: 'access_granted', scope: 'subject', subject: product %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_access_granted = true %}{% else %}{% assign locksmith_access_granted = false %}{% endif %}
 {%- liquid
   case context
     when 'card' or 'line_item'
       assign base_text_class = ''
+
       if settings.product_card_text_font == 'heading'
         assign base_text_class = 'h6 '
       endif
+
       assign regular_price_classes = base_text_class | append: 'text-subdued'
       assign on_sale_price_classes = base_text_class | append: 'text-on-sale'
       assign compare_at_price_classes = base_text_class | append: 'text-subdued line-through'
       assign unit_price_classes = base_text_class | append: 'text-subdued'
+
     when 'product'
       assign regular_price_classes = base_text_class | append: 'h4 text-subdued'
       assign on_sale_price_classes = base_text_class | append: 'h4 text-on-sale'
@@ -27,198 +37,147 @@ PRODUCT PRICE (with Locksmith trade pricing)
       assign unit_price_classes = base_text_class | append: 'h6 text-subdued'
   endcase
 -%}
+{% if locksmith_access_granted %}
+<price-list class="price-list {% if context == 'product' %}price-list--product{% endif %}">
+  {%- if variant != blank -%}
+    {%- comment -%}
+    --------------------------------------------------------------------------------------------------------------------
+    VARIANT CASE (used on product page, quick view...)
+    --------------------------------------------------------------------------------------------------------------------
+    {%- endcomment -%}
+    <sale-price class="{% if variant.compare_at_price > variant.price %}{{ on_sale_price_classes }}{% else %}{{ regular_price_classes }}{% endif %}">
+      <span class="sr-only">{{ 'product.price.sale_price' | t }}</span>
 
-{% if product.template_suffix == 'trade' and locksmith_access_granted %}
-  {%- assign trade_discount = product.metafields.custom.trade_price | default: 0 | plus: 0 -%}
-  {%- if trade_discount < 0 -%}{%- assign trade_discount = 0 -%}{%- endif -%}
-  {%- if trade_discount > 100 -%}{%- assign trade_discount = 100 -%}{%- endif -%}
+      {%- if settings.currency_code_enabled -%}
+        {{- variant.price | money_with_currency -}}
+      {%- else -%}
+        {{- variant.price | money -}}
+      {%- endif -%}
+    </sale-price>
 
-  <price-list class="price-list {% if context == 'product' %}price-list--product{% endif %}">
-    {%- if variant != blank -%}
-      {%- assign base_price = variant.price -%}
-      {%- assign discount_amount = base_price | times: trade_discount | divided_by: 100 -%}
-      {%- assign discounted_price = base_price | minus: discount_amount -%}
-      {%- assign show_compare = false -%}
-      {% if discounted_price < base_price and trade_discount > 0 %}
-        {%- assign show_compare = true -%}
-      {% endif %}
+    {%- if variant.compare_at_price > variant.price -%}
+      <compare-at-price class="{{ compare_at_price_classes }}">
+        <span class="sr-only">{{ 'product.price.regular_price' | t }}</span>
 
-      <sale-price class="{% if show_compare %}{{ on_sale_price_classes }}{% else %}{{ regular_price_classes }}{% endif %}">
         {%- if settings.currency_code_enabled -%}
-          {{ discounted_price | money_with_currency }}
+          {{- variant.compare_at_price | money_with_currency -}}
         {%- else -%}
-          {{ discounted_price | money }}
+          {{- variant.compare_at_price | money -}}
         {%- endif -%}
-      </sale-price>
-
-      {% if show_compare %}
-        <compare-at-price class="{{ compare_at_price_classes }}">
-          {%- if settings.currency_code_enabled -%}
-            {{ base_price | money_with_currency }}
-          {%- else -%}
-            {{ base_price | money }}
-          {%- endif -%}
-        </compare-at-price>
-      {% endif %}
-
-    {%- elsif line_item != blank -%}
-      {%- assign base_price = line_item.final_price -%}
-      {%- assign discount_amount = base_price | times: trade_discount | divided_by: 100 -%}
-      {%- assign discounted_price = base_price | minus: discount_amount -%}
-      {%- assign show_compare = false -%}
-      {% if discounted_price < base_price and trade_discount > 0 %}
-        {%- assign show_compare = true -%}
-      {% endif %}
-
-      <sale-price class="{% if show_compare %}{{ on_sale_price_classes }}{% else %}{{ regular_price_classes }}{% endif %}">
-        {%- if settings.currency_code_enabled -%}
-          {{ discounted_price | money_with_currency }}
-        {%- else -%}
-          {{ discounted_price | money }}
-        {%- endif -%}
-      </sale-price>
-
-      {% if show_compare %}
-        <compare-at-price class="{{ compare_at_price_classes }}">
-          {%- if settings.currency_code_enabled -%}
-            {{ base_price | money_with_currency }}
-          {%- else -%}
-            {{ base_price | money }}
-          {%- endif -%}
-        </compare-at-price>
-      {% endif %}
-
-    {%- elsif product != blank -%}
-      {%- liquid
-        if product.price_varies and settings.product_price_strategy != 'from_price'
-          assign card_variant = product.variants | sort: 'price' | last | default: product.selected_or_first_available_variant
-        else
-          assign card_variant = product.variants | sort: 'price' | first | default: product.selected_or_first_available_variant
-        endif
-        assign base_price = card_variant.price
-        assign discount_amount = base_price | times: trade_discount | divided_by: 100
-        assign discounted_price = base_price | minus: discount_amount
-        assign show_compare = false
-      -%}
-      {% if discounted_price < base_price and trade_discount > 0 %}
-        {%- assign show_compare = true -%}
-      {% endif %}
-
-      <sale-price class="{% if show_compare %}{{ on_sale_price_classes }}{% else %}{{ regular_price_classes }}{% endif %}">
-        {%- if settings.currency_code_enabled -%}
-          {{ discounted_price | money_with_currency }}
-        {%- else -%}
-          {{ discounted_price | money }}
-        {%- endif -%}
-      </sale-price>
-
-      {% if show_compare %}
-        <compare-at-price class="{{ compare_at_price_classes }}">
-          {%- if settings.currency_code_enabled -%}
-            {{ base_price | money_with_currency }}
-          {%- else -%}
-            {{ base_price | money }}
-          {%- endif -%}
-        </compare-at-price>
-      {% endif %}
-
-    {%- else -%}
-      <sale-price class="{{ regular_price_classes }}">
-        {%- if settings.currency_code_enabled -%}
-          {{ 4999 | money_with_currency }}
-        {%- else -%}
-          {{ 4999 | money }}
-        {%- endif -%}
-      </sale-price>
+      </compare-at-price>
     {%- endif -%}
+  {%- elsif line_item != blank -%}
+    {%- comment -%}
+    --------------------------------------------------------------------------------------------------------------------
+    LINE ITEM CASE (used on cart, order page...)
+    --------------------------------------------------------------------------------------------------------------------
+    {%- endcomment -%}
+    <sale-price class="{% if line_item.original_price > line_item.final_price %}{{ on_sale_price_classes }}{% else %}{{ regular_price_classes }}{% endif %}">
+      <span class="sr-only">{{ 'product.price.sale_price' | t }}</span>
 
-    {%- unless hide_unit_price -%}
-      {%- assign unit_price_item = variant | default: line_item | default: product.selected_or_first_available_variant -%}
-      {%- if unit_price_item.unit_price -%}
-        <unit-price class="{{ unit_price_classes }}">
-          {%- assign unit_price_measurement = unit_price_item.unit_price_measurement -%}
-          {%- if unit_price_measurement.reference_value != 1 -%}
-            {%- assign reference_value = unit_price_measurement.reference_value -%}
-          {%- endif -%}
-          ({{ unit_price_item.unit_price | money }}/{{ reference_value }}{{ unit_price_measurement.reference_unit }})
-        </unit-price>
+      {%- if settings.currency_code_enabled -%}
+        {{- line_item.final_price | money_with_currency -}}
+      {%- else -%}
+        {{- line_item.final_price | money -}}
       {%- endif -%}
-    {%- endunless -%}
-  </price-list>
+    </sale-price>
 
-{% else %}
+    {%- if line_item.original_price > line_item.final_price -%}
+      <compare-at-price class="{{ compare_at_price_classes }}">
+        <span class="sr-only">{{ 'product.price.regular_price' | t }}</span>
 
-  <price-list class="price-list {% if context == 'product' %}price-list--product{% endif %}">
-    {%- if variant != blank -%}
-      <sale-price class="{% if variant.compare_at_price > variant.price %}{{ on_sale_price_classes }}{% else %}{{ regular_price_classes }}{% endif %}">
         {%- if settings.currency_code_enabled -%}
-          {{- variant.price | money_with_currency -}}
+          {{- line_item.original_price | money_with_currency -}}
         {%- else -%}
-          {{- variant.price | money -}}
+          {{- line_item.original_price | money -}}
         {%- endif -%}
-      </sale-price>
-      {%- if variant.compare_at_price > variant.price -%}
-        <compare-at-price class="{{ compare_at_price_classes }}">
-          {%- if settings.currency_code_enabled -%}
-            {{- variant.compare_at_price | money_with_currency -}}
-          {%- else -%}
-            {{- variant.compare_at_price | money -}}
-          {%- endif -%}
-        </compare-at-price>
-      {%- endif -%}
+      </compare-at-price>
+    {%- endif -%}
+  {%- elsif product != blank -%}
+    {%- comment -%}
+    --------------------------------------------------------------------------------------------------------------------
+    PRODUCT CASE (used on card)
+    --------------------------------------------------------------------------------------------------------------------
+    {%- endcomment -%}
+    {%- liquid
+      if product.price_varies and settings.product_price_strategy != 'from_price'
+        assign variant = product.variants | sort: 'price' | last | default: product.selected_or_first_available_variant
+      else
+        assign variant = product.variants | sort: 'price' | first | default: product.selected_or_first_available_variant
+      endif
 
-    {%- elsif line_item != blank -%}
-      <sale-price class="{% if line_item.original_price > line_item.final_price %}{{ on_sale_price_classes }}{% else %}{{ regular_price_classes }}{% endif %}">
-        {%- if settings.currency_code_enabled -%}
-          {{- line_item.final_price | money_with_currency -}}
-        {%- else -%}
-          {{- line_item.final_price | money -}}
-        {%- endif -%}
-      </sale-price>
-      {%- if line_item.original_price > line_item.final_price -%}
-        <compare-at-price class="{{ compare_at_price_classes }}">
-          {%- if settings.currency_code_enabled -%}
-            {{- line_item.original_price | money_with_currency -}}
-          {%- else -%}
-            {{- line_item.original_price | money -}}
-          {%- endif -%}
-        </compare-at-price>
-      {%- endif -%}
+      if settings.currency_code_enabled
+        assign variant_price = variant.price | money_with_currency
+        assign variant_compare_at_price = variant.compare_at_price | money_with_currency
+      else
+        assign variant_price = variant.price | money
+        assign variant_compare_at_price = variant.compare_at_price | money
+      endif
+    -%}
 
-    {%- elsif product != blank -%}
-      {%- liquid
-        if product.price_varies and settings.product_price_strategy != 'from_price'
-          assign variant = product.variants | sort: 'price' | last | default: product.selected_or_first_available_variant
-        else
-          assign variant = product.variants | sort: 'price' | first | default: product.selected_or_first_available_variant
-        endif
-        if settings.currency_code_enabled
-          assign variant_price = variant.price | money_with_currency
-          assign variant_compare_at_price = variant.compare_at_price | money_with_currency
-        else
-          assign variant_price = variant.price | money
-          assign variant_compare_at_price = variant.compare_at_price | money
-        endif
-      -%}
-      <sale-price class="{{ on_sale_price_classes }}">
-        {{ variant_price }}
-      </sale-price>
+    {%- if product.price_varies -%}
+      {%- assign is_variant_on_sale = false -%}
+
       {%- if variant.price < variant.compare_at_price -%}
-        <compare-at-price class="{{ compare_at_price_classes }}">
-          {{ variant_compare_at_price }}
-        </compare-at-price>
+        {%- assign is_variant_on_sale = true -%}
       {%- endif -%}
 
+      {%- if settings.product_price_strategy == 'from_price' -%}
+        <sale-price class="{% if is_variant_on_sale %}{{ on_sale_price_classes }}{% else %}{{ regular_price_classes }}{% endif %}">
+          <span class="sr-only">{{ 'product.price.sale_price' | t }}</span>
+          {{- 'product.price.from_price_html' | t: price_min: variant_price -}}
+        </sale-price>
+      {%- else -%}
+        <sale-price class="{{ on_sale_price_classes }}">
+          <span class="sr-only">{{ 'product.price.sale_price' | t }}</span>
+          {{- variant_price -}}
+        </sale-price>
+      {%- endif -%}
     {%- else -%}
-      <sale-price class="{{ regular_price_classes }}">
-        {%- if settings.currency_code_enabled -%}
-          {{ 4999 | money_with_currency }}
-        {%- else -%}
-          {{ 4999 | money }}
-        {%- endif -%}
+      <sale-price class="{% if variant.price < variant.compare_at_price %}{{ on_sale_price_classes }}{% else %}{{ regular_price_classes }}{% endif %}">
+        <span class="sr-only">{{ 'product.price.sale_price' | t }}</span>
+        {{- variant_price -}}
       </sale-price>
     {%- endif -%}
-  </price-list>
-  
 
-{% endif %}
+    {%- if variant.price < variant.compare_at_price -%}
+      <compare-at-price class="{{ compare_at_price_classes }}">
+        <span class="sr-only">{{ 'product.price.regular_price' | t }}</span>
+        {{- variant_compare_at_price -}}
+      </compare-at-price>
+    {%- endif -%}
+  {%- else -%}
+    {%- comment -%}
+    --------------------------------------------------------------------------------------------------------------------
+    PLACEHOLDER CASE (used on featured product section for instance)
+    --------------------------------------------------------------------------------------------------------------------
+    {%- endcomment -%}
+
+    <sale-price class="{{ regular_price_classes }}">
+      <span class="sr-only">{{ 'product.price.sale_price' | t }}</span>
+
+      {%- if settings.currency_code_enabled -%}
+        {{- 4999 | money_with_currency -}}
+      {%- else -%}
+        {{- 4999 | money -}}
+      {%- endif -%}
+    </sale-price>
+  {%- endif -%}
+
+  {%- unless hide_unit_price -%}
+    {%- assign unit_price_item = variant | default: line_item | default: product.selected_or_first_available_variant -%}
+
+    {%- if unit_price_item.unit_price -%}
+      <unit-price class="{{ unit_price_classes }}">
+        {%- assign unit_price_measurement = unit_price_item.unit_price_measurement -%}
+
+        {%- if unit_price_measurement.reference_value != 1 -%}
+          {%- assign reference_value = unit_price_measurement.reference_value -%}
+        {%- endif -%}
+
+        ({{ unit_price_item.unit_price | money }}/{{ reference_value }}{{ unit_price_measurement.reference_unit }})
+      </unit-price>
+    {%- endif -%}
+  {%- endunless -%}
+</price-list>{% else %}<br><a class="button" href="https://realmoutdoor.com/pages/register" style= "width:50%">REGISTER TO ACCESS PRICING</a>
+  {% endif %}
