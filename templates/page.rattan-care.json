@@ -32,7 +32,7 @@
           "type": "heading",
           "settings": {
             "text": "preserving the beauty of natural craftsmanship",
-            "heading_tag": "h5"
+            "heading_tag": "h4"
           }
         }
       },
@@ -83,6 +83,23 @@
         "content_width": "sm",
         "text_position": "center",
         "remove_vertical_spacing": false
+      }
+    },
+    "image_with_text_overlay_qEb3LE": {
+      "type": "image-with-text-overlay",
+      "name": "t:sections.image_with_text_overlay.presets.image_with_text_overlay.name",
+      "settings": {
+        "color_scheme": "",
+        "image_size": "auto",
+        "image": "shopify://shop_images/Website_Banners.png",
+        "allow_transparent_header": false,
+        "reveal_on_scroll": true,
+        "remove_vertical_spacing": true,
+        "content_width": "md",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center sm:text-center",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
       }
     },
     "rich_text_kH4Exe": {
@@ -141,7 +158,7 @@
         "richtext_PMpNGt": {
           "type": "richtext",
           "settings": {
-            "content": "<p>Weekly dusting (soft brush/microfiber) and vacuum with brush attachment; monthly damp wipe (mild soap + warm water), then dry.</p><p></p><p>Keep away from direct sun and heating vents; avoid big relative humity (RH) swings (plant fibres get brittle in low RH and distort with high RH).</p><p></p><p>If you see <strong>true dryness/splitting</strong> on bare/unfinished rattan only: spot-treat with <strong>tung oil or boiled linseed oil</strong>, very sparingly, then buff dry. (Not for lacquered/varnished finishes.)<br/><br/><strong>Avoid:</strong> routine oiling/waxing; heavy water; harsh cleaners. (Museum guidance.)</p>"
+            "content": "<p>Weekly dusting (soft brush/microfiber) and vacuum with brush attachment; monthly damp wipe (mild soap + warm water), then dry.</p><p></p><p>Keep away from direct sun and heating vents; avoid big relative humity (RH) swings (plant fibres get brittle in low RH and distort with high RH).</p><p></p><p>If you see true dryness/splitting on bare/unfinished rattan only: spot-treat with <strong>tung oil or boiled linseed oil</strong>, very sparingly, then buff dry. (Not for lacquered/varnished finishes.)<br/><br/><strong>Avoid:</strong> routine oiling/waxing; heavy water; harsh cleaners. (Museum guidance.)</p>"
           }
         }
       },
@@ -186,6 +203,43 @@
         "heading_h7TEUC",
         "subheading_3VaCBi",
         "richtext_GgXny9"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "content_width": "sm",
+        "text_position": "start",
+        "remove_vertical_spacing": false
+      }
+    },
+    "rich_text_WiaCT6": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_maBWVQ": {
+          "type": "heading",
+          "settings": {
+            "text": "Driftwood Silver (weathered grey look)",
+            "heading_tag": "h3"
+          }
+        },
+        "subheading_DQrYxR": {
+          "type": "subheading",
+          "settings": {
+            "text": "Silvery-grey “driftwood” tone"
+          }
+        },
+        "richtext_cYhxNC": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p><strong>DO: </strong>Use covered outdoor spaces (porch/lanai) with airflow—short periods outdoors only; bring inside during rain/humidity spikes. Expect visible fade in months with strong UV and fuller greying over ~1–3 years depending on climate/exposure (directional estimate based on manufacturer & outdoor finish timelines).</p><p><strong>AVOID:</strong> Leaving natural rattan uncovered outside year-round; saturating with water.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_maBWVQ",
+        "subheading_DQrYxR",
+        "richtext_cYhxNC"
       ],
       "name": "t:sections.rich_text.presets.rich_text.name",
       "settings": {
@@ -409,9 +463,11 @@
     "main",
     "image_with_text_overlay_eGGdm6",
     "rich_text_aV6E9D",
+    "image_with_text_overlay_qEb3LE",
     "rich_text_kH4Exe",
     "rich_text_JrCQmz",
     "rich_text_CkDbNq",
+    "rich_text_WiaCT6",
     "multi_column_H74NXX",
     "image_with_text_overlay_VBHBXX",
     "rich_text_XfEYiT"
