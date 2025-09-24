@@ -121,7 +121,13 @@
             <span class="h6">{{ product.title }}</span>
 
             {%- if product.selected_or_first_available_variant != nil -%}
-             {% if locksmith_access_granted %}{%- render 'price-list', variant: product.selected_or_first_available_variant, hide_unit_price: true, context: 'card' -%} {% endif %} 
+             {% if locksmith_access_granted %}
+              
+              {%- render 'price-list', variant: product.selected_or_first_available_variant, hide_unit_price: true, context: 'card' -%} 
+{% else %}
+              {%- render 'price-list', variant: product.selected_or_first_available_variant, hide_unit_price: true, context: 'card' -%} 
+            
+            {% endif %} 
             {%- endif -%}
           </div>
         </div>
