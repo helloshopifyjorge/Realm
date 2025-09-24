@@ -68,19 +68,13 @@
         "richtext_DR7m4U": {
           "type": "richtext",
           "settings": {
-            "content": "<p>For all inquiries regarding the Belgian Pearls collection, please contact our founder Elizabeth Archangeli directly. Whether you’re a trade professional seeking pricing, a designer exploring customization options, or simply curious to learn more, Elizabeth is dedicated to providing personalized support. You may reach out through the form below or email her directly for prompt assistance.</p>"
+            "content": "<p>Whether you’re a trade professional seeking pricing, a designer exploring customization options, or simply curious to learn more, our team is dedicated to providing personalized support. You may reach out through the form below or email our founder directly.</p>"
           }
         },
         "subheading_P9pUHB": {
           "type": "subheading",
           "settings": {
-            "text": "<a href=\"mailto:elizabeth@realmoutdoor.com\" target=\"_blank\" title=\"Email Elizabeth\">founder | elizabeth archangeli</a>"
-          }
-        },
-        "subheading_736MKp": {
-          "type": "subheading",
-          "settings": {
-            "text": "(802) 825-8368"
+            "text": "<a href=\"mailto:elizabeth@realmoutdoor.com\" target=\"_blank\" title=\"Email Elizabeth\"> elizabeth archangeli</a>"
           }
         }
       },
@@ -88,8 +82,7 @@
         "heading_EKxXUy",
         "heading_6DQA8x",
         "richtext_DR7m4U",
-        "subheading_P9pUHB",
-        "subheading_736MKp"
+        "subheading_P9pUHB"
       ],
       "name": "t:sections.rich_text.presets.rich_text.name",
       "settings": {
@@ -107,10 +100,10 @@
           "type": "button",
           "settings": {
             "style": "solid",
-            "loggedintext": "View Collection",
-            "loggedin_url": "",
-            "notloggedin_url": "",
-            "notloggedintext": "REGISTER FOR TRADE PRICING",
+            "loggedintext": "learn more about realm outdoor",
+            "loggedin_url": "shopify://pages/who-we-are",
+            "notloggedin_url": "shopify://pages/who-we-are",
+            "notloggedintext": "learn more about realm outdoor",
             "background": "",
             "text_color": ""
           }
