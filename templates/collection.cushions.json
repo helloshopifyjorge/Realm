@@ -1,0 +1,150 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection-banner": {
+      "type": "collection-banner",
+      "settings": {
+        "color_scheme": "",
+        "image_size": "auto",
+        "allow_transparent_header": false,
+        "reveal": true,
+        "enable_parallax": true,
+        "show_image": true,
+        "show_collection_title": true,
+        "show_collection_description": true,
+        "show_breadcrumb": false,
+        "content_width": "xs",
+        "overlay_color": "#000000",
+        "overlay_opacity": 20
+      }
+    },
+    "rich_text_HRR3Cq": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_M9XJgg": {
+          "type": "heading",
+          "settings": {
+            "text": "Our First Collection, Curated for North America",
+            "heading_tag": "h3"
+          }
+        },
+        "richtext_4MxLaN": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Belgian Pearls, created by Greet Lefèvre in collaboration with the Defleure Home Collection in Belgium, embodies the artistry of European design. Defined by its craftsmanship and quiet elegance, this distinguished collection is now available in North America through Realm Outdoor—welcoming both discerning homeowners and design professionals, with exclusive trade benefits available.<br/><br/></p>"
+          }
+        },
+        "button_8A7rzT": {
+          "type": "button",
+          "settings": {
+            "style": "solid",
+            "loggedintext": "Shop Cushions",
+            "loggedin_url": "shopify://collections/belgian-pearls-cushions",
+            "notloggedin_url": "shopify://pages/register",
+            "notloggedintext": "REGISTER FOR TRADE PRICING",
+            "background": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_M9XJgg",
+        "richtext_4MxLaN",
+        "button_8A7rzT"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "content_width": "sm",
+        "text_position": "center",
+        "remove_vertical_spacing": false
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "color_scheme": "",
+        "hide_product_information": false,
+        "products_per_page": 48,
+        "products_per_row_mobile": "2",
+        "products_size_desktop": "medium",
+        "show_grid_mode_selector": false,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "filter_layout": "drawer",
+        "quick_links_menu": "",
+        "show_sort_by": false,
+        "show_filters": false,
+        "show_results_count": false,
+        "show_filter_group_name": false,
+        "show_filter_values_count": false,
+        "open_filters_by_default": false
+      }
+    },
+    "rich_text_WCVm87": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_nccifX": {
+          "type": "heading",
+          "settings": {
+            "text": "Realm outdoor",
+            "heading_tag": "h1"
+          }
+        },
+        "subheading_yErbyr": {
+          "type": "subheading",
+          "settings": {
+            "text": "elevated. versatile. crafted for trade."
+          }
+        },
+        "button_qDiFMF": {
+          "type": "button",
+          "settings": {
+            "style": "solid",
+            "loggedintext": "shop new arrivals",
+            "loggedin_url": "shopify://pages/new-arrivals",
+            "notloggedin_url": "shopify://pages/new-arrivals",
+            "notloggedintext": "shop new arrivals",
+            "background": "#454d31",
+            "text_color": "#f7f5f0"
+          }
+        },
+        "richtext_iD8arF": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>For all inquiries regarding the Belgian Pearls collection, please contact our founder <a href=\"mailto:info@realmoutdoor.com\" target=\"_blank\" title=\"Email Elizabeth\">Elizabeth Archangeli</a> </p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_nccifX",
+        "subheading_yErbyr",
+        "button_qDiFMF",
+        "richtext_iD8arF"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "content_width": "sm",
+        "text_position": "center",
+        "remove_vertical_spacing": false
+      }
+    }
+  },
+  "order": [
+    "collection-banner",
+    "rich_text_HRR3Cq",
+    "main",
+    "rich_text_WCVm87"
+  ]
+}
