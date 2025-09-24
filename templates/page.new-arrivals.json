@@ -262,18 +262,18 @@
         "heading_xKhDh6": {
           "type": "heading",
           "settings": {
-            "text": "Contact us for more information on the belgian pearls collection and custom cushion inquiries",
-            "heading_tag": "h3"
+            "text": "for more information on the belgian pearls collection and custom cushion inquiries",
+            "heading_tag": "h5"
           }
         },
         "button_er876L": {
           "type": "button",
           "settings": {
             "style": "solid",
-            "loggedintext": "View Collection",
-            "loggedin_url": "",
-            "notloggedin_url": "",
-            "notloggedintext": "REGISTER TO ACCESS PRICING",
+            "loggedintext": "contact us",
+            "loggedin_url": "shopify://pages/contact",
+            "notloggedin_url": "shopify://pages/contact",
+            "notloggedintext": "contact us",
             "background": "",
             "text_color": ""
           }
