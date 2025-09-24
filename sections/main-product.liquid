@@ -120,16 +120,9 @@
 
           <div class="v-stack">
             <span class="h6">{{ product.title }}</span>
-{% if locksmith_access_granted %}
+
             {%- if product.selected_or_first_available_variant != nil -%}
-             
-              
-              Trade Price: {%- render 'price-trade', variant: product.selected_or_first_available_variant, hide_unit_price: true, context: 'card' -%} 
-{% else %}
-             Retail Price: {%- render 'price-list', variant: product.selected_or_first_available_variant, hide_unit_price: true, context: 'card' -%} 
-              <br><a class="button" href="https://realmoutdoor.com/pages/register" style= "width:80%">REGISTER TO ACCESS TRADE PRICE</a>
             
-            {% endif %} 
             {%- endif -%}
           </div>
         </div>
