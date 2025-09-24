@@ -24,7 +24,7 @@
         "heading_yzcUXH": {
           "type": "heading",
           "settings": {
-            "text": "CONTACT US",
+            "text": "Let’s perfect your vision.",
             "heading_tag": "h1"
           }
         }
@@ -61,7 +61,7 @@
         "heading_6DQA8x": {
           "type": "heading",
           "settings": {
-            "text": "Quiet Luxury with a personal connection",
+            "text": "Luxury with a personal touch",
             "heading_tag": "h3"
           }
         },
@@ -107,22 +107,17 @@
           "type": "button",
           "settings": {
             "style": "solid",
-            "text": "Button text",
-            "url": "",
+            "loggedintext": "View Collection",
+            "loggedin_url": "",
+            "notloggedin_url": "",
+            "notloggedintext": "REGISTER FOR TRADE PRICING",
             "background": "",
             "text_color": ""
-          }
-        },
-        "richtext_dJGQbz": {
-          "type": "richtext",
-          "settings": {
-            "content": "<p>*****BUTTON NEEDS TO SAY \"REGISTER FOR TRADE PRICING\"</p>"
           }
         }
       },
       "block_order": [
-        "button_KTiw49",
-        "richtext_dJGQbz"
+        "button_KTiw49"
       ],
       "name": "t:sections.rich_text.presets.rich_text.name",
       "settings": {
