@@ -104,7 +104,7 @@
         "richtext_wp9TdA": {
           "type": "richtext",
           "settings": {
-            "content": "<ul><li><strong>Gentle, low-moisture cleaning</strong> is the baseline: dust with a soft cloth/brush or vacuum with a brush attachment; for grime, use a tiny amount of mild soap in warm water—never soak, and dry thoroughly.</li><li><strong>Outdoor exposure:</strong> natural rattan is for interiors or <em>short</em> stints outdoors/covered spaces. Avoid prolonged sun/rain; rotate pieces to even any fading. Expect greying when used outside under cover.</li><li><strong>Oils & waxes:</strong> Museums warn that past applications of waxes/PEG/glycerin darken plant fibers and can accelerate long-term deterioration or get sticky; for conservation contexts, avoid these. Some furniture makers allow <strong>very sparing oiling</strong> only when dryness/splitting is present (often on unsealed cane/rattan), not as routine “polish.” </li><li>We’ll reflect both: default = no oil; if splitting is evident, spot-oil is a last resort.</li></ul>"
+            "content": "<p><strong>Gentle, low-moisture cleaning</strong> is the baseline: dust with a soft cloth/brush or vacuum with a brush attachment; for grime, use a tiny amount of mild soap in warm water—never soak, and dry thoroughly.</p><p><strong>Outdoor exposure:</strong> natural rattan is for interiors or <em>short</em> stints outdoors/covered spaces. Avoid prolonged sun/rain; rotate pieces to even any fading. Expect greying when used outside under cover.</p><p><strong>Oils & waxes:</strong> Museums warn that past applications of waxes/PEG/glycerin darken plant fibers and can accelerate long-term deterioration or get sticky; for conservation contexts, avoid these. Some furniture makers allow <strong>very sparing oiling</strong> only when dryness/splitting is present (often on unsealed cane/rattan), not as routine “polish.” </p><p><strong>We’ll reflect both: </strong>default = no oil; if splitting is evident, spot-oil is a last resort.</p>"
           }
         }
       },
@@ -141,7 +141,7 @@
         "richtext_PMpNGt": {
           "type": "richtext",
           "settings": {
-            "content": "<ul><li>Weekly dusting (soft brush/microfiber) and vacuum with brush attachment; monthly damp wipe (mild soap + warm water), then dry.</li></ul><p></p><ul><li>Keep away from direct sun and heating vents; avoid big relative humity (RH) swings (plant fibres get brittle in low RH and distort with high RH).</li></ul><p></p><ul><li>If you see <strong>true dryness/splitting</strong> on bare/unfinished rattan only: spot-treat with <strong>tung oil or boiled linseed oil</strong>, very sparingly, then buff dry. (Not for lacquered/varnished finishes.)<br/><br/><strong>Avoid:</strong> routine oiling/waxing; heavy water; harsh cleaners. (Museum guidance.)</li></ul>"
+            "content": "<p>Weekly dusting (soft brush/microfiber) and vacuum with brush attachment; monthly damp wipe (mild soap + warm water), then dry.</p><p></p><p>Keep away from direct sun and heating vents; avoid big relative humity (RH) swings (plant fibres get brittle in low RH and distort with high RH).</p><p></p><p>If you see <strong>true dryness/splitting</strong> on bare/unfinished rattan only: spot-treat with <strong>tung oil or boiled linseed oil</strong>, very sparingly, then buff dry. (Not for lacquered/varnished finishes.)<br/><br/><strong>Avoid:</strong> routine oiling/waxing; heavy water; harsh cleaners. (Museum guidance.)</p>"
           }
         }
       },
