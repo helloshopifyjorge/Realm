@@ -492,14 +492,6 @@
             "button_background": "",
             "button_text_color": ""
           }
-        },
-        "text_Bqj8Cf": {
-          "type": "text",
-          "settings": {
-            "title": "Founder | Elizabeth archangeli",
-            "content": "<p>(470) 604-1410</p>",
-            "enable_follow_on_shop": false
-          }
         }
       },
       "block_order": [
@@ -507,8 +499,7 @@
         "links",
         "links_hXemnz",
         "links_dqC6pp",
-        "newsletter",
-        "text_Bqj8Cf"
+        "newsletter"
       ],
       "settings": {
         "color_scheme": "scheme-3",
