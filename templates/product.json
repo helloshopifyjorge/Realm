@@ -38,7 +38,7 @@
         "liquid_ixm9qF": {
           "type": "liquid",
           "settings": {
-            "liquid": "<a href=\"#price\"><U>INQUIRE ABOUT THIS PRODUCT</U></a>"
+            "liquid": "<a href=\"#price\"><u>INQUIRE ABOUT THIS PRODUCT</u></a>"
           }
         },
         "separator": {
