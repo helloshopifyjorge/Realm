@@ -1,5 +1,5 @@
 {% capture var %}{% render 'locksmith-variables', variable: 'access_granted', scope: 'subject', subject: product %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_access_granted = true %}{% else %}{% assign locksmith_access_granted = false %}{% endif %}
-1
+
 {%- liquid
   assign has_content_below_gallery = false
 
