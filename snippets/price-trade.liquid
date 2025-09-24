@@ -1,15 +1,10 @@
 {%- comment -%}
-----------------------------------------------------------------------------------------------------------------------
-TRADE PRICE SNIPPET
-----------------------------------------------------------------------------------------------------------------------
-
-Displays trade price = variant price minus % discount defined in metafields.
-
-Metafields required:
-  • Variant → custom.trade_percent  (Number: Decimal or Integer, 0–100)
-  • (Optional fallback) Product → custom.trade_percent
-
-If no metafield or 0% is set, falls back to normal price rendering.
+TRADE PRICE (Display only)
+- Shows variant price minus % from metafields.
+- Metafields:
+  • Variant: custom.trade_percent (Number: Decimal/Integer, 0–100)
+  • Product: custom.trade_percent (optional fallback)
+- No checkout/cart price changes—this is visual only.
 {%- endcomment -%}
 
 {%- liquid
@@ -32,7 +27,7 @@ If no metafield or 0% is set, falls back to normal price rendering.
 
   assign current_variant = variant | default: product.selected_or_first_available_variant
 
-  # Read % from variant first, then product
+  # Read % discount: variant first, then product
   assign v_pct = current_variant.metafields.custom.trade_percent
   assign p_pct = product.metafields.custom.trade_percent
   assign trade_percent = v_pct
@@ -40,7 +35,7 @@ If no metafield or 0% is set, falls back to normal price rendering.
     assign trade_percent = p_pct
   endif
 
-  # Normalize and clamp
+  # Normalize/clamp
   assign trade_percent = trade_percent | default: 0 | plus: 0
   if trade_percent < 0
     assign trade_percent = 0
@@ -66,14 +61,16 @@ If no metafield or 0% is set, falls back to normal price rendering.
       {%- endif -%}
     </sale-price>
 
-    <compare-at-price class="{{ compare_at_price_classes }}">
-      <span class="sr-only">{{ 'product.price.regular_price' | t }}</span>
-      {%- if settings.currency_code_enabled -%}
-        {{ base_price | money_with_currency }}
-      {%- else -%}
-        {{ base_price | money }}
-      {%- endif -%}
-    </compare-at-price>
+    {%- if trade_price < base_price -%}
+      <compare-at-price class="{{ compare_at_price_classes }}">
+        <span class="sr-only">{{ 'product.price.regular_price' | t }}</span>
+        {%- if settings.currency_code_enabled -%}
+          {{ base_price | money_with_currency }}
+        {%- else -%}
+          {{ base_price | money }}
+        {%- endif -%}
+      </compare-at-price>
+    {%- endif -%}
 
     {%- unless hide_unit_price -%}
       {%- assign unit_price_item = current_variant -%}
@@ -88,6 +85,6 @@ If no metafield or 0% is set, falls back to normal price rendering.
   </price-list>
 
 {%- else -%}
-  {# Fall back to your normal price list snippet #}
+  {# No trade % set → fall back to your standard pricing snippet #}
   {%- render 'price-list', product: product, variant: current_variant, line_item: line_item, hide_unit_price: hide_unit_price, context: context -%}
 {%- endif -%}
