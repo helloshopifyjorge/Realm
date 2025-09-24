@@ -55,6 +55,36 @@
         "overlay_opacity": 30
       }
     },
+    "rich_text_aV6E9D": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_KiKiNH": {
+          "type": "heading",
+          "settings": {
+            "text": "designed to endure. meant to be treasured.",
+            "heading_tag": "h3"
+          }
+        },
+        "richtext_7ztFRH": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Rattan is more than a material—it’s a living expression of craftsmanship, heritage, and natural elegance. Each piece in the <em>Belgian Pearls Collection</em> is handcrafted from sustainably harvested rattan, designed to age gracefully with time and care. This page offers guidance to help you protect, preserve, and celebrate your Realm Outdoor investment.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_KiKiNH",
+        "richtext_7ztFRH"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "content_width": "sm",
+        "text_position": "center",
+        "remove_vertical_spacing": false
+      }
+    },
     "multi_column_H74NXX": {
       "type": "multi-column",
       "blocks": {
@@ -152,16 +182,16 @@
       "name": "t:sections.multi_column.presets.multi_column.name",
       "settings": {
         "color_scheme": "",
-        "separate_section_with_border": true,
+        "separate_section_with_border": false,
         "columns_per_row": 4,
         "stack_on_mobile": true,
-        "overlap_image": true,
-        "content_alignment": "center",
+        "overlap_image": false,
+        "content_alignment": "start",
         "text_alignment": "start",
         "spacing": "lg",
-        "subheading": "Designed to Endure. Meant to Be Treasured.",
+        "subheading": "",
         "title": "",
-        "content": "<p>Rattan is more than a material—it’s a living expression of craftsmanship, heritage, and natural elegance. Each piece in the <em>Belgian Pearls Collection</em> is handcrafted from sustainably harvested rattan, designed to age gracefully with time and care. This page offers guidance to help you protect, preserve, and celebrate your Realm Outdoor investment.</p>"
+        "content": ""
       }
     },
     "image_with_text_overlay_VBHBXX": {
@@ -266,6 +296,7 @@
   "order": [
     "main",
     "image_with_text_overlay_eGGdm6",
+    "rich_text_aV6E9D",
     "multi_column_H74NXX",
     "image_with_text_overlay_VBHBXX",
     "rich_text_XfEYiT"
