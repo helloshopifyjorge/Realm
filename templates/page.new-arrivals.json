@@ -73,77 +73,22 @@
     "multi_column_hFQXQg": {
       "type": "multi-column",
       "blocks": {
-        "image_with_text_eMcdfp": {
-          "type": "image_with_text",
-          "settings": {
-            "image": "shopify://shop_images/MimiArmchairwBoxCushion.png",
-            "title": "mimi armchair with box cushion",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "",
-            "link_text": ""
-          }
-        },
-        "image_with_text_fxUKKM": {
-          "type": "image_with_text",
-          "settings": {
-            "image": "shopify://shop_images/MimiSideChairwBoxCushion_1.png",
-            "title": "mimi side chair with box cushion",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "",
-            "link_text": ""
-          }
-        },
-        "image_with_text_6xzqKW": {
-          "type": "image_with_text",
-          "settings": {
-            "image": "shopify://shop_images/5_7be5581c-d02b-490b-bb02-2e2e75152470.png",
-            "title": "maryse dining chair with box cushion",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "",
-            "link_text": ""
-          }
-        },
-        "image_with_text_WRiJJm": {
-          "type": "image_with_text",
-          "settings": {
-            "image": "shopify://shop_images/Mary_Louise_w_Cushions_4768162d-7f7f-4a42-85cf-430fadd93c3d.png",
-            "title": "mary louise armchair with box cushion",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "",
-            "link_text": ""
-          }
-        },
-        "image_with_text_4ntLj4": {
-          "type": "image_with_text",
-          "settings": {
-            "image": "shopify://shop_images/Mimi_Settee_w_Box_Cushion_3195dd87-c461-49ac-90e4-db15cca8c3cf.png",
-            "title": "monalie chair with box cushion",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "",
-            "link_text": ""
-          }
-        },
-        "image_with_text_kaAEKd": {
-          "type": "image_with_text",
-          "settings": {
-            "image": "shopify://shop_images/Mimi_Settee_w_Box_Cushion_2_ab3a9341-7bf1-4539-886b-be7f4fee72d8.png",
-            "title": "august lounge chair with knife edge pillow",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "",
-            "link_text": ""
-          }
-        },
         "image_with_text_W38Wkm": {
           "type": "image_with_text",
           "settings": {
             "image": "shopify://shop_images/Mimi_Settee_w_Box_Cushion_4_6ed90fdd-1a57-4e59-8b79-60a3c7115cf7.png",
             "title": "august lounge chair with box cushion",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "",
+            "link_text": ""
+          }
+        },
+        "image_with_text_eMcdfp": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/MimiArmchairwBoxCushion.png",
+            "title": "mimi armchair with box cushion",
             "heading_tag": "h4",
             "content": "",
             "link_url": "",
@@ -160,53 +105,12 @@
             "link_url": "",
             "link_text": ""
           }
-        },
-        "image_with_text_cLpTbE": {
-          "type": "image_with_text",
-          "settings": {
-            "image": "shopify://shop_images/MimiSetteewBoxCushion_8.png",
-            "title": "mimi settee with box cushion",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "",
-            "link_text": ""
-          }
-        },
-        "image_with_text_94UPTT": {
-          "type": "image_with_text",
-          "settings": {
-            "image": "shopify://shop_images/Mimi_Settee_w_Knife_Edge_Cushion_ec73d0c0-56ed-49b4-8355-2c55ef919262.png",
-            "title": "mimi settee with knife edge pillow",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "",
-            "link_text": ""
-          }
-        },
-        "image_with_text_Nqmg6n": {
-          "type": "image_with_text",
-          "settings": {
-            "image": "shopify://shop_images/August_Bench_w_Box_Cushion_07dee1ae-4ab7-40c3-a166-1493338094d9.png",
-            "title": "august bench with box cushion",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "",
-            "link_text": ""
-          }
         }
       },
       "block_order": [
-        "image_with_text_eMcdfp",
-        "image_with_text_fxUKKM",
-        "image_with_text_6xzqKW",
-        "image_with_text_WRiJJm",
-        "image_with_text_4ntLj4",
-        "image_with_text_kaAEKd",
         "image_with_text_W38Wkm",
-        "image_with_text_zFRRwK",
-        "image_with_text_cLpTbE",
-        "image_with_text_94UPTT",
-        "image_with_text_Nqmg6n"
+        "image_with_text_eMcdfp",
+        "image_with_text_zFRRwK"
       ],
       "name": "t:sections.multi_column.presets.multi_column.name",
       "settings": {
@@ -322,9 +226,11 @@
         "button_i9KHQj": {
           "type": "button",
           "settings": {
-            "style": "solid",
-            "text": "learn more",
-            "url": "shopify://pages/contact-1",
+            "style": "outline",
+            "loggedintext": "shop now",
+            "loggedin_url": "shopify://products/mary-louise-chair",
+            "notloggedin_url": "shopify://products/mary-louise-chair",
+            "notloggedintext": "shop now",
             "background": "",
             "text_color": ""
           }
@@ -364,8 +270,10 @@
           "type": "button",
           "settings": {
             "style": "solid",
-            "text": "SHOP NOW",
-            "url": "shopify://products/mary-louise-armchair-cushion",
+            "loggedintext": "View Collection",
+            "loggedin_url": "",
+            "notloggedin_url": "",
+            "notloggedintext": "REGISTER TO ACCESS PRICING",
             "background": "",
             "text_color": ""
           }
