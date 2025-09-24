@@ -15,7 +15,7 @@ Supported variables
 * hide_unit_price: if set to true unit prices are hidden (mostly useful for size constrained elements)
 * context: can be "product", "line_item" or "card". This controls how the prices are displayed (using the correct sizes)
 {%- endcomment -%}
-{% capture var %}{% render 'locksmith-variables', variable: 'access_granted', scope: 'subject', subject: product %}{% endcapture %}{% if var == 'true' %}{% assign locksmith_access_granted = true %}{% else %}{% assign locksmith_access_granted = false %}{% endif %}
+
 {%- liquid
   case context
     when 'card' or 'line_item'
@@ -179,5 +179,4 @@ Supported variables
       </unit-price>
     {%- endif -%}
   {%- endunless -%}
-</price-list>{% else %}<br><a class="button" href="https://realmoutdoor.com/pages/register" style= "width:50%">REGISTER TO ACCESS TRADE PRICE</a>
-  {% endif %}
+</price-list>{%- endif -%}
