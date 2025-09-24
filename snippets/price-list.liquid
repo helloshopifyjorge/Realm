@@ -1,13 +1,9 @@
 {%- comment -%}
 ----------------------------------------------------------------------------------------------------------------------
 PRODUCT PRICE (with Locksmith trade pricing)
+- Trade % in product.metafields.custom.trade_price (e.g. 15 => 15% off)
+- Trade pricing shows ONLY when product.template_suffix == 'trade' AND Locksmith access is granted
 ----------------------------------------------------------------------------------------------------------------------
-
-* Shows discounted price only when:
-  - product.template_suffix == 'trade'
-  - locksmith_access_granted == true
-  - product.metafields.custom.trade_price > 0
-* Otherwise, falls back to regular price display.
 {%- endcomment -%}
 
 {% capture var %}{% render 'locksmith-variables', variable: 'access_granted', scope: 'subject', subject: product %}{% endcapture %}
@@ -42,7 +38,10 @@ PRODUCT PRICE (with Locksmith trade pricing)
       {%- assign base_price = variant.price -%}
       {%- assign discount_amount = base_price | times: trade_discount | divided_by: 100 -%}
       {%- assign discounted_price = base_price | minus: discount_amount -%}
-      {%- assign show_compare = discounted_price < base_price and trade_discount > 0 -%}
+      {%- assign show_compare = false -%}
+      {% if discounted_price < base_price and trade_discount > 0 %}
+        {%- assign show_compare = true -%}
+      {% endif %}
 
       <sale-price class="{% if show_compare %}{{ on_sale_price_classes }}{% else %}{{ regular_price_classes }}{% endif %}">
         {%- if settings.currency_code_enabled -%}
@@ -52,7 +51,7 @@ PRODUCT PRICE (with Locksmith trade pricing)
         {%- endif -%}
       </sale-price>
 
-      {%- if show_compare -%}
+      {% if show_compare %}
         <compare-at-price class="{{ compare_at_price_classes }}">
           {%- if settings.currency_code_enabled -%}
             {{ base_price | money_with_currency }}
@@ -60,13 +59,16 @@ PRODUCT PRICE (with Locksmith trade pricing)
             {{ base_price | money }}
           {%- endif -%}
         </compare-at-price>
-      {%- endif -%}
+      {% endif %}
 
     {%- elsif line_item != blank -%}
       {%- assign base_price = line_item.final_price -%}
       {%- assign discount_amount = base_price | times: trade_discount | divided_by: 100 -%}
       {%- assign discounted_price = base_price | minus: discount_amount -%}
-      {%- assign show_compare = discounted_price < base_price and trade_discount > 0 -%}
+      {%- assign show_compare = false -%}
+      {% if discounted_price < base_price and trade_discount > 0 %}
+        {%- assign show_compare = true -%}
+      {% endif %}
 
       <sale-price class="{% if show_compare %}{{ on_sale_price_classes }}{% else %}{{ regular_price_classes }}{% endif %}">
         {%- if settings.currency_code_enabled -%}
@@ -76,7 +78,7 @@ PRODUCT PRICE (with Locksmith trade pricing)
         {%- endif -%}
       </sale-price>
 
-      {%- if show_compare -%}
+      {% if show_compare %}
         <compare-at-price class="{{ compare_at_price_classes }}">
           {%- if settings.currency_code_enabled -%}
             {{ base_price | money_with_currency }}
@@ -84,7 +86,7 @@ PRODUCT PRICE (with Locksmith trade pricing)
             {{ base_price | money }}
           {%- endif -%}
         </compare-at-price>
-      {%- endif -%}
+      {% endif %}
 
     {%- elsif product != blank -%}
       {%- liquid
@@ -96,8 +98,11 @@ PRODUCT PRICE (with Locksmith trade pricing)
         assign base_price = card_variant.price
         assign discount_amount = base_price | times: trade_discount | divided_by: 100
         assign discounted_price = base_price | minus: discount_amount
-        assign show_compare = discounted_price < base_price and trade_discount > 0
+        assign show_compare = false
       -%}
+      {% if discounted_price < base_price and trade_discount > 0 %}
+        {%- assign show_compare = true -%}
+      {% endif %}
 
       <sale-price class="{% if show_compare %}{{ on_sale_price_classes }}{% else %}{{ regular_price_classes }}{% endif %}">
         {%- if settings.currency_code_enabled -%}
@@ -107,7 +112,7 @@ PRODUCT PRICE (with Locksmith trade pricing)
         {%- endif -%}
       </sale-price>
 
-      {%- if show_compare -%}
+      {% if show_compare %}
         <compare-at-price class="{{ compare_at_price_classes }}">
           {%- if settings.currency_code_enabled -%}
             {{ base_price | money_with_currency }}
@@ -115,12 +120,33 @@ PRODUCT PRICE (with Locksmith trade pricing)
             {{ base_price | money }}
           {%- endif -%}
         </compare-at-price>
-      {%- endif -%}
+      {% endif %}
+
+    {%- else -%}
+      <sale-price class="{{ regular_price_classes }}">
+        {%- if settings.currency_code_enabled -%}
+          {{ 4999 | money_with_currency }}
+        {%- else -%}
+          {{ 4999 | money }}
+        {%- endif -%}
+      </sale-price>
     {%- endif -%}
+
+    {%- unless hide_unit_price -%}
+      {%- assign unit_price_item = variant | default: line_item | default: product.selected_or_first_available_variant -%}
+      {%- if unit_price_item.unit_price -%}
+        <unit-price class="{{ unit_price_classes }}">
+          {%- assign unit_price_measurement = unit_price_item.unit_price_measurement -%}
+          {%- if unit_price_measurement.reference_value != 1 -%}
+            {%- assign reference_value = unit_price_measurement.reference_value -%}
+          {%- endif -%}
+          ({{ unit_price_item.unit_price | money }}/{{ reference_value }}{{ unit_price_measurement.reference_unit }})
+        </unit-price>
+      {%- endif -%}
+    {%- endunless -%}
   </price-list>
 
 {% else %}
-  {#-- FALLBACK: your original price rendering + register link --#}
 
   <price-list class="price-list {% if context == 'product' %}price-list--product{% endif %}">
     {%- if variant != blank -%}
@@ -175,11 +201,7 @@ PRODUCT PRICE (with Locksmith trade pricing)
         endif
       -%}
       <sale-price class="{{ on_sale_price_classes }}">
-        {%- if settings.currency_code_enabled -%}
-          {{ variant_price }}
-        {%- else -%}
-          {{ variant_price }}
-        {%- endif -%}
+        {{ variant_price }}
       </sale-price>
       {%- if variant.price < variant.compare_at_price -%}
         <compare-at-price class="{{ compare_at_price_classes }}">
@@ -199,4 +221,5 @@ PRODUCT PRICE (with Locksmith trade pricing)
   </price-list>
   <br>
   <a class="button" href="https://realmoutdoor.com/pages/register" style="width:50%">REGISTER TO ACCESS PRICING</a>
+
 {% endif %}
