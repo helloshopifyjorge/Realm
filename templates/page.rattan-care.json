@@ -366,6 +366,43 @@
         "text_position": "center",
         "remove_vertical_spacing": false
       }
+    },
+    "rich_text_CkDbNq": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_3VaCBi": {
+          "type": "subheading",
+          "settings": {
+            "text": "Subheading"
+          }
+        },
+        "heading_h7TEUC": {
+          "type": "heading",
+          "settings": {
+            "text": "Heading",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_GgXny9": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_3VaCBi",
+        "heading_h7TEUC",
+        "richtext_GgXny9"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "content_width": "sm",
+        "text_position": "center",
+        "remove_vertical_spacing": false
+      }
     }
   },
   "order": [
@@ -374,6 +411,7 @@
     "rich_text_aV6E9D",
     "rich_text_kH4Exe",
     "rich_text_JrCQmz",
+    "rich_text_CkDbNq",
     "multi_column_H74NXX",
     "image_with_text_overlay_VBHBXX",
     "rich_text_XfEYiT"
