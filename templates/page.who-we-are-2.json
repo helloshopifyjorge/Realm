@@ -121,7 +121,7 @@
       "settings": {
         "color_scheme": "",
         "image_size": "auto",
-        "image": "shopify://shop_images/2.png",
+        "image": "shopify://shop_images/7_f11f8178-3601-4e75-8394-2c8ecc14d1dd.png",
         "allow_transparent_header": false,
         "reveal_on_scroll": true,
         "remove_vertical_spacing": true,
@@ -254,7 +254,7 @@
       "name": "t:sections.rich_text.presets.rich_text.name",
       "settings": {
         "color_scheme": "scheme-3",
-        "separate_section_with_border": false,
+        "separate_section_with_border": true,
         "content_width": "sm",
         "text_position": "center",
         "remove_vertical_spacing": false
