@@ -38,6 +38,61 @@ Supported variables
   endcase
 -%}
 {% if locksmith_access_granted %}
+  {%- comment -%}
+  Discounted trade pricing
+  Assumes product.metafields.custom.trade-price contains a number (e.g. "15" for 15% off)
+  {%- endcomment -%}
+
+  {%- assign trade_discount = product.metafields.custom.trade-price | default: 0 | plus: 0 -%}
+  {%- if variant != blank -%}
+    {%- assign discounted_price = variant.price | times: 100 | minus: trade_discount | divided_by: 100 -%}
+    {%- assign discounted_price = variant.price | times: 100 | minus: (variant.price | times: trade_discount) | divided_by: 100 -%}
+  {%- endif -%}
+
+  <price-list class="price-list {% if context == 'product' %}price-list--product{% endif %}">
+    {%- if variant != blank -%}
+      <sale-price class="{{ on_sale_price_classes }}">
+        <span class="sr-only">{{ 'product.price.sale_price' | t }}</span>
+        {%- if settings.currency_code_enabled -%}
+          {{ discounted_price | money_with_currency }}
+        {%- else -%}
+          {{ discounted_price | money }}
+        {%- endif -%}
+      </sale-price>
+
+      <compare-at-price class="{{ compare_at_price_classes }}">
+        <span class="sr-only">{{ 'product.price.regular_price' | t }}</span>
+        {%- if settings.currency_code_enabled -%}
+          {{ variant.price | money_with_currency }}
+        {%- else -%}
+          {{ variant.price | money }}
+        {%- endif -%}
+      </compare-at-price>
+    {%- elsif product != blank -%}
+      {%- assign variant = product.selected_or_first_available_variant -%}
+      {%- assign discounted_price = variant.price | times: 100 | minus: (variant.price | times: trade_discount) | divided_by: 100 -%}
+
+      <sale-price class="{{ on_sale_price_classes }}">
+        <span class="sr-only">{{ 'product.price.sale_price' | t }}</span>
+        {%- if settings.currency_code_enabled -%}
+          {{ discounted_price | money_with_currency }}
+        {%- else -%}
+          {{ discounted_price | money }}
+        {%- endif -%}
+      </sale-price>
+
+      <compare-at-price class="{{ compare_at_price_classes }}">
+        <span class="sr-only">{{ 'product.price.regular_price' | t }}</span>
+        {%- if settings.currency_code_enabled -%}
+          {{ variant.price | money_with_currency }}
+        {%- else -%}
+          {{ variant.price | money }}
+        {%- endif -%}
+      </compare-at-price>
+    {%- endif -%}
+  </price-list>
+{% else %}
+
 <price-list class="price-list {% if context == 'product' %}price-list--product{% endif %}">
   {%- if variant != blank -%}
     {%- comment -%}
@@ -179,5 +234,5 @@ Supported variables
       </unit-price>
     {%- endif -%}
   {%- endunless -%}
-</price-list>{% else %}<br><a class="button" href="https://realmoutdoor.com/pages/register" style= "width:50%">REGISTER TO ACCESS PRICING</a>
+</price-list><br><a class="button" href="https://realmoutdoor.com/pages/register" style= "width:50%">REGISTER TO ACCESS PRICING</a>
   {% endif %}
