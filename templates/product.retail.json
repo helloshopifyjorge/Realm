@@ -64,7 +64,6 @@
         },
         "buy_buttons_YARXHh": {
           "type": "buy_buttons",
-          "disabled": true,
           "settings": {
             "show_payment_button": false,
             "show_gift_card_recipient": true,
