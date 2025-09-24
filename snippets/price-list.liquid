@@ -37,7 +37,7 @@ Supported variables
       assign unit_price_classes = base_text_class | append: 'h6 text-subdued'
   endcase
 -%}
-{% if locksmith_access_granted %}
+
 <price-list class="price-list {% if context == 'product' %}price-list--product{% endif %}">
   {%- if variant != blank -%}
     {%- comment -%}
@@ -179,4 +179,4 @@ Supported variables
       </unit-price>
     {%- endif -%}
   {%- endunless -%}
-</price-list>{%- endif -%}
+</price-list>
