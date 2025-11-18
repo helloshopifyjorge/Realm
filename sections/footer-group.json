@@ -417,7 +417,7 @@
           "type": "link",
           "settings": {
             "text": "Register to Trade",
-            "url": "shopify://pages/register"
+            "url": "shopify://pages/register-to-trade"
           }
         },
         "link_GDPzR8": {

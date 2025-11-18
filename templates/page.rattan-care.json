@@ -411,7 +411,7 @@
             "style": "solid",
             "loggedintext": "SHOP NEW ARRIVALS",
             "loggedin_url": "shopify://pages/new-arrivals",
-            "notloggedin_url": "shopify://pages/register",
+            "notloggedin_url": "shopify://pages/register-to-trade",
             "notloggedintext": "REGISTER TO TRADE",
             "background": "#454d31",
             "text_color": "#f7f5f0"

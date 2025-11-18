@@ -48,7 +48,7 @@
             "style": "solid",
             "loggedintext": "Shop Cushions",
             "loggedin_url": "shopify://collections/belgian-pearls-cushions",
-            "notloggedin_url": "shopify://pages/register",
+            "notloggedin_url": "shopify://pages/register-to-trade",
             "notloggedintext": "REGISTER FOR TRADE PRICING",
             "background": "",
             "text_color": ""
